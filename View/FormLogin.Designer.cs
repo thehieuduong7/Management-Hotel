@@ -40,11 +40,11 @@ namespace Management_Hotel.View
             this.radioLabour = new System.Windows.Forms.RadioButton();
             this.radioRecept = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.buttonExit = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -90,7 +90,7 @@ namespace Management_Hotel.View
             // 
             this.buttonLogin.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.buttonLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogin.Location = new System.Drawing.Point(294, 185);
+            this.buttonLogin.Location = new System.Drawing.Point(273, 186);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(111, 37);
             this.buttonLogin.TabIndex = 7;
@@ -183,6 +183,20 @@ namespace Management_Hotel.View
             this.panel2.Size = new System.Drawing.Size(432, 30);
             this.panel2.TabIndex = 0;
             // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Hotel;
+            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 26;
+            this.iconPictureBox1.Location = new System.Drawing.Point(10, 2);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(33, 26);
+            this.iconPictureBox1.TabIndex = 11;
+            this.iconPictureBox1.TabStop = false;
+            // 
             // buttonExit
             // 
             this.buttonExit.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -229,20 +243,6 @@ namespace Management_Hotel.View
             this.label1.Size = new System.Drawing.Size(81, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Username";
-            // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Hotel;
-            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 26;
-            this.iconPictureBox1.Location = new System.Drawing.Point(10, 2);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(33, 26);
-            this.iconPictureBox1.TabIndex = 11;
-            this.iconPictureBox1.TabStop = false;
             // 
             // FormLogin
             // 
