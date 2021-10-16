@@ -88,16 +88,6 @@
     <Compile Include="Control\ControlReceptionist\CtrOrderFood.cs" />
     <Compile Include="Control\ControlReceptionist\CtrOrderRoom.cs" />
     <Compile Include="Control\ControlReceptionist\CtrPayRoom.cs" />
-    <Compile Include="Model\DivisionEmployee.cs" />
-    <Compile Include="Model\Food.cs" />
-    <Compile Include="Model\Guest.cs" />
-    <Compile Include="Model\OrderFood.cs" />
-    <Compile Include="Model\OrderRoom.cs" />
-    <Compile Include="Model\Position.cs" />
-    <Compile Include="Model\CheckInCheckOut.cs" />
-    <Compile Include="Model\ReportEmpolyeeWork.cs" />
-    <Compile Include="Model\Room.cs" />
-    <Compile Include="Model\Shift.cs" />
     <Compile Include="View\FormClient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,8 +119,6 @@
       <DependentUpon>FormAddEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="Control\CtrAccount.cs" />
-    <Compile Include="Model\Account.cs" />
-    <Compile Include="Model\Employee.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\FormLogin.cs">
@@ -441,6 +429,8 @@
     <Content Include="Image\empty.jpg" />
     <Content Include="Image\login.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
