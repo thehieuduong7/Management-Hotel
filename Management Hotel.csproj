@@ -75,7 +75,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="View\Class1.cs" />
     <Compile Include="View\FormClient.cs">
       <SubType>Form</SubType>
     </Compile>

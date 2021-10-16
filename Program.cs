@@ -9,16 +9,13 @@ using Management_Hotel.View.ViewLabourer;
 using Management_Hotel.View.ViewReceptionist;
 using Management_Hotel.View.ViewReceptionist.ViewFormOrder;
 using Management_Hotel.View.ViewReceptionist.ViewFormOrderFood;
-using Management_Hotel.Control;
+
 
 namespace Management_Hotel
 {
     static class Program
     {
-        // new update
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
+
         [STAThread]
         static void Main()
         {
