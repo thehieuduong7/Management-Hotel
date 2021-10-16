@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0D486996-1BD5-4146-B71C-3854B5ECAB14}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Management_Hotel</RootNamespace>
+    <AssemblyName>Management Hotel</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Spire.Doc, Version=9.4.12.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>packages\Spire.Doc.9.4.12\lib\net40\Spire.Doc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.License, Version=1.3.8.40, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
+      <HintPath>packages\Spire.Doc.9.4.12\lib\net40\Spire.License.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=7.4.5.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>packages\Spire.Doc.9.4.12\lib\net40\Spire.Pdf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Control\ConnectSql.cs" />
+    <Compile Include="Control\ControlLabourer\CtrCheckInCheckOut.cs" />
+    <Compile Include="Control\ControlManager\CtrManager.cs" />
+    <Compile Include="Control\ControlManager\CtrManagerAddEmployee.cs" />
+    <Compile Include="Control\ControlManager\CtrDivisionEmployee.cs" />
+    <Compile Include="Control\ControlManager\CtrManagerEditEmployee.cs" />
+    <Compile Include="Control\ControlManager\CtrReportEmployee.cs" />
+    <Compile Include="Control\ControlReceptionist\CtrCRUDFood.cs" />
+    <Compile Include="Control\ControlReceptionist\CtrCRUDGuest.cs" />
+    <Compile Include="Control\ControlReceptionist\CtrCRUDRoom.cs" />
+    <Compile Include="Control\ControlReceptionist\CtrOrderFood.cs" />
+    <Compile Include="Control\ControlReceptionist\CtrOrderRoom.cs" />
+    <Compile Include="Control\ControlReceptionist\CtrPayRoom.cs" />
+    <Compile Include="Model\DivisionEmployee.cs" />
+    <Compile Include="Model\Food.cs" />
+    <Compile Include="Model\Guest.cs" />
+    <Compile Include="Model\OrderFood.cs" />
+    <Compile Include="Model\OrderRoom.cs" />
+    <Compile Include="Model\Position.cs" />
+    <Compile Include="Model\CheckInCheckOut.cs" />
+    <Compile Include="Model\ReportEmpolyeeWork.cs" />
+    <Compile Include="Model\Room.cs" />
+    <Compile Include="Model\Shift.cs" />
+    <Compile Include="View\FormClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormClient.Designer.cs">
+      <DependentUpon>FormClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewLabourer\FormCheckInCheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewLabourer\FormCheckInCheckOut.Designer.cs">
+      <DependentUpon>FormCheckInCheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewLabourer\FormMenuLabourer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewLabourer\FormMenuLabourer.Designer.cs">
+      <DependentUpon>FormMenuLabourer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewLabourer\FormShowInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewLabourer\FormShowInformation.Designer.cs">
+      <DependentUpon>FormShowInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewManager\FormAddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewManager\FormAddEmployee.Designer.cs">
+      <DependentUpon>FormAddEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CtrAccount.cs" />
+    <Compile Include="Model\Account.cs" />
+    <Compile Include="Model\Employee.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewManager\FormDivisionEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewManager\FormDivisionEmployee.Designer.cs">
+      <DependentUpon>FormDivisionEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewManager\FormEditEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewManager\FormEditEmployee.Designer.cs">
+      <DependentUpon>FormEditEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewManager\FormMenuManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewManager\FormMenuManager.Designer.cs">
+      <DependentUpon>FormMenuManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewManager\FormReportEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewManager\FormReportEmployee.Designer.cs">
+      <DependentUpon>FormReportEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\CtrUser\ControlAddFood.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\CtrUser\ControlAddFood.Designer.cs">
+      <DependentUpon>ControlAddFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\CtrUser\ControlAddRoom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\CtrUser\ControlAddRoom.Designer.cs">
+      <DependentUpon>ControlAddRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\CtrUser\ControlCRUDFood.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\CtrUser\ControlCRUDFood.Designer.cs">
+      <DependentUpon>ControlCRUDFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\CtrUser\ControlOrderRoom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\CtrUser\ControlOrderRoom.Designer.cs">
+      <DependentUpon>ControlOrderRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\CtrUser\ControlRoom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\CtrUser\ControlRoom.Designer.cs">
+      <DependentUpon>ControlRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\CtrUser\ControlSelectFood.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\CtrUser\ControlSelectFood.Designer.cs">
+      <DependentUpon>ControlSelectFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\FormAddGuest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\FormAddGuest.Designer.cs">
+      <DependentUpon>FormAddGuest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\FormAddRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\FormAddRoom.Designer.cs">
+      <DependentUpon>FormAddRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\FormCRUDGuest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\FormCRUDGuest.Designer.cs">
+      <DependentUpon>FormCRUDGuest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\FormCRUDRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\FormCRUDRoom.Designer.cs">
+      <DependentUpon>FormCRUDRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\FormEditGuest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\FormEditGuest.Designer.cs">
+      <DependentUpon>FormEditGuest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\FormEditRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\FormEditRoom.Designer.cs">
+      <DependentUpon>FormEditRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\FormMenuReceptionist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\FormMenuReceptionist.Designer.cs">
+      <DependentUpon>FormMenuReceptionist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\FormOrderRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\FormOrderRoom.Designer.cs">
+      <DependentUpon>FormOrderRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\FormRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\FormRoom.Designer.cs">
+      <DependentUpon>FormRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\FormSelectGuest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\FormSelectGuest.Designer.cs">
+      <DependentUpon>FormSelectGuest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\ViewFormFood\FormAddFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\ViewFormFood\FormAddFood.Designer.cs">
+      <DependentUpon>FormAddFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\ViewFormFood\FormCRUDFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\ViewFormFood\FormCRUDFood.Designer.cs">
+      <DependentUpon>FormCRUDFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\ViewFormFood\FormEditFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\ViewFormFood\FormEditFood.Designer.cs">
+      <DependentUpon>FormEditFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\ViewFormOrderFood\FormOrderFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\ViewFormOrderFood\FormOrderFood.Designer.cs">
+      <DependentUpon>FormOrderFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\ViewFormOrder\FormOptionCloseRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\ViewFormOrder\FormOptionCloseRoom.Designer.cs">
+      <DependentUpon>FormOptionCloseRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\ViewFormOrder\FormOptionOpenRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\ViewFormOrder\FormOptionOpenRoom.Designer.cs">
+      <DependentUpon>FormOptionOpenRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\ViewFormOrder\FormPayRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\ViewFormOrder\FormPayRoom.Designer.cs">
+      <DependentUpon>FormPayRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\ViewFormOrder\FormSelectRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\ViewFormOrder\FormSelectRoom.Designer.cs">
+      <DependentUpon>FormSelectRoom.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\FormClient.resx">
+      <DependentUpon>FormClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewLabourer\FormCheckInCheckOut.resx">
+      <DependentUpon>FormCheckInCheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewLabourer\FormMenuLabourer.resx">
+      <DependentUpon>FormMenuLabourer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewLabourer\FormShowInformation.resx">
+      <DependentUpon>FormShowInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewManager\FormAddEmployee.resx">
+      <DependentUpon>FormAddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="View\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewManager\FormDivisionEmployee.resx">
+      <DependentUpon>FormDivisionEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewManager\FormEditEmployee.resx">
+      <DependentUpon>FormEditEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewManager\FormMenuManager.resx">
+      <DependentUpon>FormMenuManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewManager\FormReportEmployee.resx">
+      <DependentUpon>FormReportEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewReceptionist\CtrUser\ControlAddFood.resx">
+      <DependentUpon>ControlAddFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewReceptionist\CtrUser\ControlAddRoom.resx">
+      <DependentUpon>ControlAddRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewReceptionist\CtrUser\ControlCRUDFood.resx">
+      <DependentUpon>ControlCRUDFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewReceptionist\CtrUser\ControlOrderRoom.resx">
+      <DependentUpon>ControlOrderRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewReceptionist\CtrUser\ControlRoom.resx">
+      <DependentUpon>ControlRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewReceptionist\CtrUser\ControlSelectFood.resx">
+      <DependentUpon>ControlSelectFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewReceptionist\FormAddGuest.resx">
+      <DependentUpon>FormAddGuest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewReceptionist\FormAddRoom.resx">
+      <DependentUpon>FormAddRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewReceptionist\FormCRUDGuest.resx">
+      <DependentUpon>FormCRUDGuest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewReceptionist\FormCRUDRoom.resx">
+      <DependentUpon>FormCRUDRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewReceptionist\FormEditGuest.resx">
+      <DependentUpon>FormEditGuest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewReceptionist\FormEditRoom.resx">
+      <DependentUpon>FormEditRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewReceptionist\FormMenuReceptionist.resx">
+      <DependentUpon>FormMenuReceptionist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewReceptionist\FormOrderRoom.resx">
+      <DependentUpon>FormOrderRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewReceptionist\FormRoom.resx">
+      <DependentUpon>FormRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewReceptionist\FormSelectGuest.resx">
+      <DependentUpon>FormSelectGuest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewReceptionist\ViewFormFood\FormAddFood.resx">
+      <DependentUpon>FormAddFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewReceptionist\ViewFormFood\FormCRUDFood.resx">
+      <DependentUpon>FormCRUDFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewReceptionist\ViewFormFood\FormEditFood.resx">
+      <DependentUpon>FormEditFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewReceptionist\ViewFormOrderFood\FormOrderFood.resx">
+      <DependentUpon>FormOrderFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewReceptionist\ViewFormOrder\FormOptionCloseRoom.resx">
+      <DependentUpon>FormOptionCloseRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewReceptionist\ViewFormOrder\FormOptionOpenRoom.resx">
+      <DependentUpon>FormOptionOpenRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewReceptionist\ViewFormOrder\FormPayRoom.resx">
+      <DependentUpon>FormPayRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewReceptionist\ViewFormOrder\FormSelectRoom.resx">
+      <DependentUpon>FormSelectRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="phancong.xlsx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="code hotel.sql" />
+    <Content Include="ImageView\hotelBackGroud.jpg" />
+    <Content Include="Image\empty.jpg" />
+    <Content Include="Image\login.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
