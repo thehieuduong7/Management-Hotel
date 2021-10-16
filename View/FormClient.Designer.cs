@@ -3,6 +3,7 @@ namespace Management_Hotel.View
 {
     partial class FormClient
     {
+        // update here
         /// <summary>
         /// Required designer variable.
         /// </summary>
