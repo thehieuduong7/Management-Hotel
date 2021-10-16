@@ -15,7 +15,7 @@ namespace Management_Hotel
 {
     static class Program
     {
-        
+        // new update
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
