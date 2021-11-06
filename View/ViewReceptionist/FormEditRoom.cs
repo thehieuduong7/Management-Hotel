@@ -14,25 +14,23 @@ namespace Management_Hotel.View.ViewReceptionist
 {
     public partial class FormEditRoom : Form
     {
-        private CtrCRUDRoom ctrRoom;
+  
         public FormEditRoom()
         {
             InitializeComponent();
             formLoad();
         }
-        private void formLoad()
+
+        public void fillData(PhongModel phong)
         {
-            ctrRoom = new CtrCRUDRoom();
-            this.numbericGiuong.Maximum = 5;
-            this.numbericGiuong.Minimum = 1;
-        }
-        public void fillData(Room room)
-        {
-            this.textBoxID.Text = room.id_phong;
-            this.textBoxLoai.Text = room.loai;
-            this.numbericGiuong.Value = room.so_giuong;
-            this.textBoxVitri.Text = room.vitri;
-            this.textboxGia.Text = room.giaPhong.ToString();
+            this.textBoxID.Text = phong.id_phong.ToString();
+            this.textBoxLoai.Text = phong.tenPhong;
+            this.textBoxVitri.Text = phong.ViTri;
+            this.textboxGia.Text = phong.gia.ToString();
+            if (phong.Photo != null)
+            {
+                this.pictureGuest.Image = phong.Photo;
+            }
         }
         private void buttonCancel_Click(object sender, EventArgs e)
         {
@@ -50,11 +48,11 @@ namespace Management_Hotel.View.ViewReceptionist
             try
             {
                 string id = this.textBoxID.Text;
-                string loai=this.textBoxLoai.Text;
-                int so_giuong = (int)this.numbericGiuong.Value;
+                string tenPhong=this.textBoxLoai.Text;
                 string viTri=this.textBoxVitri.Text;
                 float gia = float.Parse(this.textboxGia.Text);
-                Room room = new Room(id, loai, so_giuong, viTri, gia);
+                Image photo = this.pictureGuest.Image;
+                PhongModel phong = new PhongModel(id, tenPhong, viTri, photo, gia );
                 if (ctrRoom.updatetRoom(room))
                 {
                     MessageBox.Show("Success", "Management Hotel",
@@ -83,6 +81,27 @@ namespace Management_Hotel.View.ViewReceptionist
             Capture = false;
             Message msg = Message.Create(Handle, WM_NCLBUTTONDOWN, (IntPtr)HT_CAPTION, IntPtr.Zero);
             base.WndProc(ref msg);
+        }
+
+        private void buttonUpload_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Title = "Upload image";
+            openFileDialog1.Filter = "Pictures files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png)" +
+                "|*.jpg; *.jpeg; *.jpe; *.jfif; *.png|All files (*.*)|*.*";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    Bitmap temp = new Bitmap(openFileDialog1.FileName);
+                    this.pictureGuest.Image = new Bitmap(temp, pictureGuest.Size);
+                }
+                catch (System.ArgumentException)
+                {
+                    MessageBox.Show
+                        (openFileDialog1.FileName + "\nPaint cannot read this file!!!",
+                        "Management Hotel", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

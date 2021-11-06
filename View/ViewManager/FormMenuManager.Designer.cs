@@ -31,15 +31,14 @@ namespace Management_Hotel.View.ViewManager
         {
             this.buttonReportOption = new FontAwesome.Sharp.IconButton();
             this.panelOption = new System.Windows.Forms.Panel();
-            this.buttonScheduleOption = new FontAwesome.Sharp.IconButton();
-            this.buttonEmployeeOption = new FontAwesome.Sharp.IconButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panelShow = new System.Windows.Forms.Panel();
             this.buttonOrderRoom = new FontAwesome.Sharp.IconButton();
             this.buttonFood = new FontAwesome.Sharp.IconButton();
             this.buttonGuest = new FontAwesome.Sharp.IconButton();
             this.buttonRoom = new FontAwesome.Sharp.IconButton();
+            this.buttonEmployeeOption = new FontAwesome.Sharp.IconButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelShow = new System.Windows.Forms.Panel();
             this.panelOption.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +55,7 @@ namespace Management_Hotel.View.ViewManager
             this.buttonReportOption.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.buttonReportOption.IconSize = 40;
             this.buttonReportOption.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonReportOption.Location = new System.Drawing.Point(10, 100);
+            this.buttonReportOption.Location = new System.Drawing.Point(10, 50);
             this.buttonReportOption.Name = "buttonReportOption";
             this.buttonReportOption.Size = new System.Drawing.Size(180, 50);
             this.buttonReportOption.TabIndex = 8;
@@ -77,7 +76,6 @@ namespace Management_Hotel.View.ViewManager
             this.panelOption.Controls.Add(this.buttonGuest);
             this.panelOption.Controls.Add(this.buttonRoom);
             this.panelOption.Controls.Add(this.buttonReportOption);
-            this.panelOption.Controls.Add(this.buttonScheduleOption);
             this.panelOption.Controls.Add(this.buttonEmployeeOption);
             this.panelOption.Controls.Add(this.panel2);
             this.panelOption.Controls.Add(this.panel1);
@@ -88,30 +86,92 @@ namespace Management_Hotel.View.ViewManager
             this.panelOption.Size = new System.Drawing.Size(200, 780);
             this.panelOption.TabIndex = 2;
             // 
-            // buttonScheduleOption
+            // buttonOrderRoom
             // 
-            this.buttonScheduleOption.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonScheduleOption.FlatAppearance.BorderSize = 0;
-            this.buttonScheduleOption.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.buttonScheduleOption.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonScheduleOption.Font = new System.Drawing.Font("Lucida Console", 10F);
-            this.buttonScheduleOption.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.buttonScheduleOption.IconChar = FontAwesome.Sharp.IconChar.CalendarAlt;
-            this.buttonScheduleOption.IconColor = System.Drawing.Color.Silver;
-            this.buttonScheduleOption.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.buttonScheduleOption.IconSize = 40;
-            this.buttonScheduleOption.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonScheduleOption.Location = new System.Drawing.Point(10, 50);
-            this.buttonScheduleOption.Name = "buttonScheduleOption";
-            this.buttonScheduleOption.Size = new System.Drawing.Size(180, 50);
-            this.buttonScheduleOption.TabIndex = 7;
-            this.buttonScheduleOption.Text = "Schedule";
-            this.buttonScheduleOption.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonScheduleOption.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonScheduleOption.UseVisualStyleBackColor = true;
-            this.buttonScheduleOption.Click += new System.EventHandler(this.buttonScheduleOption_Click);
-            this.buttonScheduleOption.MouseLeave += new System.EventHandler(this.buttonInformation_MouseLeave);
-            this.buttonScheduleOption.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonInformation_MouseMove);
+            this.buttonOrderRoom.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonOrderRoom.FlatAppearance.BorderSize = 0;
+            this.buttonOrderRoom.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.buttonOrderRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOrderRoom.Font = new System.Drawing.Font("Lucida Console", 10F);
+            this.buttonOrderRoom.ForeColor = System.Drawing.Color.Silver;
+            this.buttonOrderRoom.IconChar = FontAwesome.Sharp.IconChar.MapMarker;
+            this.buttonOrderRoom.IconColor = System.Drawing.Color.Silver;
+            this.buttonOrderRoom.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.buttonOrderRoom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonOrderRoom.Location = new System.Drawing.Point(10, 250);
+            this.buttonOrderRoom.Name = "buttonOrderRoom";
+            this.buttonOrderRoom.Size = new System.Drawing.Size(180, 50);
+            this.buttonOrderRoom.TabIndex = 12;
+            this.buttonOrderRoom.Text = "Order";
+            this.buttonOrderRoom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonOrderRoom.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonOrderRoom.UseVisualStyleBackColor = true;
+            this.buttonOrderRoom.Click += new System.EventHandler(this.buttonOrderRoom_Click);
+            // 
+            // buttonFood
+            // 
+            this.buttonFood.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonFood.FlatAppearance.BorderSize = 0;
+            this.buttonFood.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.buttonFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonFood.Font = new System.Drawing.Font("Lucida Console", 10F);
+            this.buttonFood.ForeColor = System.Drawing.Color.Silver;
+            this.buttonFood.IconChar = FontAwesome.Sharp.IconChar.Utensils;
+            this.buttonFood.IconColor = System.Drawing.Color.Silver;
+            this.buttonFood.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.buttonFood.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonFood.Location = new System.Drawing.Point(10, 200);
+            this.buttonFood.Name = "buttonFood";
+            this.buttonFood.Size = new System.Drawing.Size(180, 50);
+            this.buttonFood.TabIndex = 11;
+            this.buttonFood.Text = "Food";
+            this.buttonFood.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonFood.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonFood.UseVisualStyleBackColor = true;
+            this.buttonFood.Click += new System.EventHandler(this.buttonFood_Click);
+            // 
+            // buttonGuest
+            // 
+            this.buttonGuest.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonGuest.FlatAppearance.BorderSize = 0;
+            this.buttonGuest.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.buttonGuest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonGuest.Font = new System.Drawing.Font("Lucida Console", 10F);
+            this.buttonGuest.ForeColor = System.Drawing.Color.Silver;
+            this.buttonGuest.IconChar = FontAwesome.Sharp.IconChar.Users;
+            this.buttonGuest.IconColor = System.Drawing.Color.Silver;
+            this.buttonGuest.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.buttonGuest.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonGuest.Location = new System.Drawing.Point(10, 150);
+            this.buttonGuest.Name = "buttonGuest";
+            this.buttonGuest.Size = new System.Drawing.Size(180, 50);
+            this.buttonGuest.TabIndex = 10;
+            this.buttonGuest.Text = "Guest";
+            this.buttonGuest.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonGuest.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonGuest.UseVisualStyleBackColor = true;
+            this.buttonGuest.Click += new System.EventHandler(this.buttonGuest_Click);
+            // 
+            // buttonRoom
+            // 
+            this.buttonRoom.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonRoom.FlatAppearance.BorderSize = 0;
+            this.buttonRoom.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.buttonRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRoom.Font = new System.Drawing.Font("Lucida Console", 10F);
+            this.buttonRoom.ForeColor = System.Drawing.Color.Silver;
+            this.buttonRoom.IconChar = FontAwesome.Sharp.IconChar.HouseUser;
+            this.buttonRoom.IconColor = System.Drawing.Color.Silver;
+            this.buttonRoom.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.buttonRoom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonRoom.Location = new System.Drawing.Point(10, 100);
+            this.buttonRoom.Name = "buttonRoom";
+            this.buttonRoom.Size = new System.Drawing.Size(180, 50);
+            this.buttonRoom.TabIndex = 9;
+            this.buttonRoom.Text = "      Room";
+            this.buttonRoom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonRoom.UseVisualStyleBackColor = true;
+            this.buttonRoom.Click += new System.EventHandler(this.buttonRoom_Click);
             // 
             // buttonEmployeeOption
             // 
@@ -164,93 +224,6 @@ namespace Management_Hotel.View.ViewManager
             this.panelShow.Size = new System.Drawing.Size(1150, 780);
             this.panelShow.TabIndex = 4;
             // 
-            // buttonOrderRoom
-            // 
-            this.buttonOrderRoom.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonOrderRoom.FlatAppearance.BorderSize = 0;
-            this.buttonOrderRoom.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.buttonOrderRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonOrderRoom.Font = new System.Drawing.Font("Lucida Console", 10F);
-            this.buttonOrderRoom.ForeColor = System.Drawing.Color.Silver;
-            this.buttonOrderRoom.IconChar = FontAwesome.Sharp.IconChar.MapMarker;
-            this.buttonOrderRoom.IconColor = System.Drawing.Color.Silver;
-            this.buttonOrderRoom.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.buttonOrderRoom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonOrderRoom.Location = new System.Drawing.Point(10, 300);
-            this.buttonOrderRoom.Name = "buttonOrderRoom";
-            this.buttonOrderRoom.Size = new System.Drawing.Size(180, 50);
-            this.buttonOrderRoom.TabIndex = 12;
-            this.buttonOrderRoom.Text = "Order";
-            this.buttonOrderRoom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonOrderRoom.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonOrderRoom.UseVisualStyleBackColor = true;
-            this.buttonOrderRoom.Click += new System.EventHandler(this.buttonOrderRoom_Click);
-            // 
-            // buttonFood
-            // 
-            this.buttonFood.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonFood.FlatAppearance.BorderSize = 0;
-            this.buttonFood.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.buttonFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonFood.Font = new System.Drawing.Font("Lucida Console", 10F);
-            this.buttonFood.ForeColor = System.Drawing.Color.Silver;
-            this.buttonFood.IconChar = FontAwesome.Sharp.IconChar.Utensils;
-            this.buttonFood.IconColor = System.Drawing.Color.Silver;
-            this.buttonFood.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.buttonFood.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonFood.Location = new System.Drawing.Point(10, 250);
-            this.buttonFood.Name = "buttonFood";
-            this.buttonFood.Size = new System.Drawing.Size(180, 50);
-            this.buttonFood.TabIndex = 11;
-            this.buttonFood.Text = "Food";
-            this.buttonFood.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonFood.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonFood.UseVisualStyleBackColor = true;
-            this.buttonFood.Click += new System.EventHandler(this.buttonFood_Click);
-            // 
-            // buttonGuest
-            // 
-            this.buttonGuest.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonGuest.FlatAppearance.BorderSize = 0;
-            this.buttonGuest.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.buttonGuest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonGuest.Font = new System.Drawing.Font("Lucida Console", 10F);
-            this.buttonGuest.ForeColor = System.Drawing.Color.Silver;
-            this.buttonGuest.IconChar = FontAwesome.Sharp.IconChar.Users;
-            this.buttonGuest.IconColor = System.Drawing.Color.Silver;
-            this.buttonGuest.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.buttonGuest.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonGuest.Location = new System.Drawing.Point(10, 200);
-            this.buttonGuest.Name = "buttonGuest";
-            this.buttonGuest.Size = new System.Drawing.Size(180, 50);
-            this.buttonGuest.TabIndex = 10;
-            this.buttonGuest.Text = "Guest";
-            this.buttonGuest.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonGuest.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonGuest.UseVisualStyleBackColor = true;
-            this.buttonGuest.Click += new System.EventHandler(this.buttonGuest_Click);
-            // 
-            // buttonRoom
-            // 
-            this.buttonRoom.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonRoom.FlatAppearance.BorderSize = 0;
-            this.buttonRoom.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.buttonRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRoom.Font = new System.Drawing.Font("Lucida Console", 10F);
-            this.buttonRoom.ForeColor = System.Drawing.Color.Silver;
-            this.buttonRoom.IconChar = FontAwesome.Sharp.IconChar.HouseUser;
-            this.buttonRoom.IconColor = System.Drawing.Color.Silver;
-            this.buttonRoom.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.buttonRoom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonRoom.Location = new System.Drawing.Point(10, 150);
-            this.buttonRoom.Name = "buttonRoom";
-            this.buttonRoom.Size = new System.Drawing.Size(180, 50);
-            this.buttonRoom.TabIndex = 9;
-            this.buttonRoom.Text = "      Room";
-            this.buttonRoom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonRoom.UseVisualStyleBackColor = true;
-            this.buttonRoom.Click += new System.EventHandler(this.buttonRoom_Click);
-            // 
             // FormMenuManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -274,7 +247,6 @@ namespace Management_Hotel.View.ViewManager
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton buttonEmployeeOption;
-        private FontAwesome.Sharp.IconButton buttonScheduleOption;
         private FontAwesome.Sharp.IconButton buttonReportOption;
         private FontAwesome.Sharp.IconButton buttonOrderRoom;
         private FontAwesome.Sharp.IconButton buttonFood;

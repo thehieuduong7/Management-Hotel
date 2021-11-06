@@ -70,6 +70,7 @@ namespace Management_Hotel.View.ViewReceptionist
             this.pictureGuest.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureGuest.TabIndex = 100;
             this.pictureGuest.TabStop = false;
+            this.pictureGuest.Click += new System.EventHandler(this.pictureGuest_Click);
             // 
             // buttonUpload
             // 

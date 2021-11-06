@@ -20,7 +20,7 @@ namespace Management_Hotel.View.ViewReceptionist
         {
             InitializeComponent();
         }
-        public Employee employee { get; set; }
+        public NhanVienModel employee { get; set; }
         private void resetColorButtonOption()
         {
             foreach (Object btn in this.panelOption.Controls)
@@ -57,13 +57,7 @@ namespace Management_Hotel.View.ViewReceptionist
             openChildForm(form);
         }
 
-        private void buttonCheckInOut_Click(object sender, EventArgs e)
-        {
-            selectButtonOption(this.buttonCheckInOut);
-            FormCheckInCheckOut form = new FormCheckInCheckOut();
-            form.employee = employee;
-            openChildForm(form);
-        }
+        
 
         private void buttonGuest_Click(object sender, EventArgs e)
         {
@@ -84,6 +78,11 @@ namespace Management_Hotel.View.ViewReceptionist
             selectButtonOption(this.buttonFood);
             FormCRUDFood form = new FormCRUDFood();
             openChildForm(form);
+        }
+
+        private void btnNhapKho_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

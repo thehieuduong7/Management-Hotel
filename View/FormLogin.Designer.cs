@@ -136,11 +136,11 @@ namespace Management_Hotel.View
             // 
             this.radioManager.AutoSize = true;
             this.radioManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioManager.Location = new System.Drawing.Point(223, 6);
+            this.radioManager.Location = new System.Drawing.Point(230, 5);
             this.radioManager.Name = "radioManager";
-            this.radioManager.Size = new System.Drawing.Size(89, 21);
+            this.radioManager.Size = new System.Drawing.Size(70, 21);
             this.radioManager.TabIndex = 2;
-            this.radioManager.Text = "Manager";
+            this.radioManager.Text = "Admin";
             this.radioManager.UseVisualStyleBackColor = true;
             this.radioManager.CheckedChanged += new System.EventHandler(this.radioManager_CheckedChanged);
             // 
@@ -151,10 +151,10 @@ namespace Management_Hotel.View
             this.radioLabour.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioLabour.Location = new System.Drawing.Point(3, 6);
             this.radioLabour.Name = "radioLabour";
-            this.radioLabour.Size = new System.Drawing.Size(92, 21);
+            this.radioLabour.Size = new System.Drawing.Size(114, 21);
             this.radioLabour.TabIndex = 0;
             this.radioLabour.TabStop = true;
-            this.radioLabour.Text = "Labourer";
+            this.radioLabour.Text = "Khách Hàng";
             this.radioLabour.UseVisualStyleBackColor = true;
             this.radioLabour.CheckedChanged += new System.EventHandler(this.radioLabour_CheckedChanged);
             // 
@@ -162,11 +162,11 @@ namespace Management_Hotel.View
             // 
             this.radioRecept.AutoSize = true;
             this.radioRecept.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioRecept.Location = new System.Drawing.Point(101, 6);
+            this.radioRecept.Location = new System.Drawing.Point(123, 6);
             this.radioRecept.Name = "radioRecept";
-            this.radioRecept.Size = new System.Drawing.Size(116, 21);
+            this.radioRecept.Size = new System.Drawing.Size(101, 21);
             this.radioRecept.TabIndex = 1;
-            this.radioRecept.Text = "Receptionist";
+            this.radioRecept.Text = "Nhân Viên";
             this.radioRecept.UseVisualStyleBackColor = true;
             this.radioRecept.CheckedChanged += new System.EventHandler(this.radioRecept_CheckedChanged);
             // 

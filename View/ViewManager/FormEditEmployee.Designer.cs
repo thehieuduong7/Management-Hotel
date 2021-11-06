@@ -29,8 +29,8 @@ namespace Management_Hotel.View.ViewManager
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonLeft = new FontAwesome.Sharp.IconPictureBox();
             this.panelSet = new System.Windows.Forms.Panel();
@@ -40,36 +40,8 @@ namespace Management_Hotel.View.ViewManager
             this.buttonRemove = new FontAwesome.Sharp.IconButton();
             this.buttonEdit = new FontAwesome.Sharp.IconButton();
             this.panelShowAccount = new System.Windows.Forms.Panel();
-            this.checkBoxShow = new System.Windows.Forms.CheckBox();
-            this.textBoxConfirm = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBoxPass = new System.Windows.Forms.TextBox();
-            this.textBoxUser = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.buttonSetAcc = new FontAwesome.Sharp.IconButton();
             this.panelShowInfor = new System.Windows.Forms.Panel();
-            this.pictureBoxAvatar = new FontAwesome.Sharp.IconPictureBox();
-            this.dateDOB = new System.Windows.Forms.DateTimePicker();
-            this.comboBoxPos = new System.Windows.Forms.ComboBox();
-            this.buttonUpload = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBoxFname = new System.Windows.Forms.TextBox();
-            this.textBoxID = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.radioMale = new System.Windows.Forms.RadioButton();
-            this.radioFemale = new System.Windows.Forms.RadioButton();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBoxAddress = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBoxLname = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBoxPhone = new System.Windows.Forms.TextBox();
-            this.buttonFindID = new System.Windows.Forms.Button();
             this.buttonSetInfor = new FontAwesome.Sharp.IconButton();
             this.panel5 = new System.Windows.Forms.Panel();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -92,10 +64,6 @@ namespace Management_Hotel.View.ViewManager
             ((System.ComponentModel.ISupportInitialize)(this.buttonLeft)).BeginInit();
             this.panelSet.SuspendLayout();
             this.panelButton.SuspendLayout();
-            this.panelShowAccount.SuspendLayout();
-            this.panelShowInfor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAvatar)).BeginInit();
-            this.panel2.SuspendLayout();
             this.panelControl.SuspendLayout();
             this.panelShow.SuspendLayout();
             this.panelDataGrid.SuspendLayout();
@@ -151,6 +119,7 @@ namespace Management_Hotel.View.ViewManager
             // 
             // panelButton
             // 
+            this.panelButton.BackColor = System.Drawing.Color.DarkGray;
             this.panelButton.Controls.Add(this.buttonAdd);
             this.panelButton.Controls.Add(this.buttonRefresh);
             this.panelButton.Controls.Add(this.buttonRemove);
@@ -227,94 +196,13 @@ namespace Management_Hotel.View.ViewManager
             // 
             // panelShowAccount
             // 
+            this.panelShowAccount.BackColor = System.Drawing.Color.DarkGray;
             this.panelShowAccount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelShowAccount.Controls.Add(this.checkBoxShow);
-            this.panelShowAccount.Controls.Add(this.textBoxConfirm);
-            this.panelShowAccount.Controls.Add(this.label13);
-            this.panelShowAccount.Controls.Add(this.textBoxPass);
-            this.panelShowAccount.Controls.Add(this.textBoxUser);
-            this.panelShowAccount.Controls.Add(this.label11);
-            this.panelShowAccount.Controls.Add(this.label12);
             this.panelShowAccount.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelShowAccount.Location = new System.Drawing.Point(0, 504);
             this.panelShowAccount.Name = "panelShowAccount";
             this.panelShowAccount.Size = new System.Drawing.Size(428, 132);
             this.panelShowAccount.TabIndex = 10;
-            // 
-            // checkBoxShow
-            // 
-            this.checkBoxShow.AutoSize = true;
-            this.checkBoxShow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.checkBoxShow.Location = new System.Drawing.Point(313, 96);
-            this.checkBoxShow.Name = "checkBoxShow";
-            this.checkBoxShow.Size = new System.Drawing.Size(101, 17);
-            this.checkBoxShow.TabIndex = 28;
-            this.checkBoxShow.Text = "Show password";
-            this.checkBoxShow.UseVisualStyleBackColor = false;
-            this.checkBoxShow.Click += new System.EventHandler(this.checkBoxShow_CheckedChanged);
-            // 
-            // textBoxConfirm
-            // 
-            this.textBoxConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.textBoxConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxConfirm.Location = new System.Drawing.Point(164, 67);
-            this.textBoxConfirm.Name = "textBoxConfirm";
-            this.textBoxConfirm.Size = new System.Drawing.Size(250, 20);
-            this.textBoxConfirm.TabIndex = 27;
-            this.textBoxConfirm.UseSystemPasswordChar = true;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Maroon;
-            this.label13.Location = new System.Drawing.Point(9, 67);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(133, 15);
-            this.label13.TabIndex = 26;
-            this.label13.Text = "Confirm Password";
-            // 
-            // textBoxPass
-            // 
-            this.textBoxPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.textBoxPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPass.Location = new System.Drawing.Point(164, 36);
-            this.textBoxPass.Name = "textBoxPass";
-            this.textBoxPass.Size = new System.Drawing.Size(250, 20);
-            this.textBoxPass.TabIndex = 24;
-            this.textBoxPass.UseSystemPasswordChar = true;
-            // 
-            // textBoxUser
-            // 
-            this.textBoxUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.textBoxUser.Enabled = false;
-            this.textBoxUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxUser.Location = new System.Drawing.Point(164, 7);
-            this.textBoxUser.Name = "textBoxUser";
-            this.textBoxUser.Size = new System.Drawing.Size(250, 20);
-            this.textBoxUser.TabIndex = 23;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Maroon;
-            this.label11.Location = new System.Drawing.Point(71, 39);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(72, 15);
-            this.label11.TabIndex = 22;
-            this.label11.Text = "Password";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Maroon;
-            this.label12.Location = new System.Drawing.Point(68, 10);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(76, 15);
-            this.label12.TabIndex = 21;
-            this.label12.Text = "Username";
             // 
             // buttonSetAcc
             // 
@@ -336,25 +224,7 @@ namespace Management_Hotel.View.ViewManager
             // 
             // panelShowInfor
             // 
-            this.panelShowInfor.Controls.Add(this.pictureBoxAvatar);
-            this.panelShowInfor.Controls.Add(this.dateDOB);
-            this.panelShowInfor.Controls.Add(this.comboBoxPos);
-            this.panelShowInfor.Controls.Add(this.buttonUpload);
-            this.panelShowInfor.Controls.Add(this.label3);
-            this.panelShowInfor.Controls.Add(this.label6);
-            this.panelShowInfor.Controls.Add(this.textBoxFname);
-            this.panelShowInfor.Controls.Add(this.textBoxID);
-            this.panelShowInfor.Controls.Add(this.label8);
-            this.panelShowInfor.Controls.Add(this.label7);
-            this.panelShowInfor.Controls.Add(this.panel2);
-            this.panelShowInfor.Controls.Add(this.label5);
-            this.panelShowInfor.Controls.Add(this.label9);
-            this.panelShowInfor.Controls.Add(this.textBoxAddress);
-            this.panelShowInfor.Controls.Add(this.label2);
-            this.panelShowInfor.Controls.Add(this.textBoxLname);
-            this.panelShowInfor.Controls.Add(this.label4);
-            this.panelShowInfor.Controls.Add(this.textBoxPhone);
-            this.panelShowInfor.Controls.Add(this.buttonFindID);
+            this.panelShowInfor.BackColor = System.Drawing.Color.DarkGray;
             this.panelShowInfor.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelShowInfor.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelShowInfor.ForeColor = System.Drawing.Color.Maroon;
@@ -362,241 +232,6 @@ namespace Management_Hotel.View.ViewManager
             this.panelShowInfor.Name = "panelShowInfor";
             this.panelShowInfor.Size = new System.Drawing.Size(428, 347);
             this.panelShowInfor.TabIndex = 4;
-            // 
-            // pictureBoxAvatar
-            // 
-            this.pictureBoxAvatar.BackColor = System.Drawing.Color.White;
-            this.pictureBoxAvatar.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pictureBoxAvatar.IconChar = FontAwesome.Sharp.IconChar.UserCircle;
-            this.pictureBoxAvatar.IconColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pictureBoxAvatar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.pictureBoxAvatar.IconSize = 90;
-            this.pictureBoxAvatar.Location = new System.Drawing.Point(313, 25);
-            this.pictureBoxAvatar.Name = "pictureBoxAvatar";
-            this.pictureBoxAvatar.Size = new System.Drawing.Size(101, 90);
-            this.pictureBoxAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxAvatar.TabIndex = 43;
-            this.pictureBoxAvatar.TabStop = false;
-            // 
-            // dateDOB
-            // 
-            this.dateDOB.CalendarMonthBackground = System.Drawing.Color.White;
-            this.dateDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateDOB.Location = new System.Drawing.Point(163, 194);
-            this.dateDOB.MaxDate = new System.DateTime(2030, 12, 31, 0, 0, 0, 0);
-            this.dateDOB.MinDate = new System.DateTime(1920, 1, 1, 0, 0, 0, 0);
-            this.dateDOB.Name = "dateDOB";
-            this.dateDOB.Size = new System.Drawing.Size(251, 23);
-            this.dateDOB.TabIndex = 42;
-            this.dateDOB.Value = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
-            // 
-            // comboBoxPos
-            // 
-            this.comboBoxPos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.comboBoxPos.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxPos.FormattingEnabled = true;
-            this.comboBoxPos.Location = new System.Drawing.Point(160, 25);
-            this.comboBoxPos.Name = "comboBoxPos";
-            this.comboBoxPos.Size = new System.Drawing.Size(126, 22);
-            this.comboBoxPos.TabIndex = 22;
-            // 
-            // buttonUpload
-            // 
-            this.buttonUpload.BackColor = System.Drawing.Color.Aqua;
-            this.buttonUpload.Font = new System.Drawing.Font("Cooper Black", 5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUpload.ForeColor = System.Drawing.Color.Red;
-            this.buttonUpload.Location = new System.Drawing.Point(313, 117);
-            this.buttonUpload.Name = "buttonUpload";
-            this.buttonUpload.Size = new System.Drawing.Size(101, 27);
-            this.buttonUpload.TabIndex = 35;
-            this.buttonUpload.Text = "Upload";
-            this.buttonUpload.UseVisualStyleBackColor = false;
-            this.buttonUpload.Click += new System.EventHandler(this.buttonUpload_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Maroon;
-            this.label3.Location = new System.Drawing.Point(66, 119);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 15);
-            this.label3.TabIndex = 26;
-            this.label3.Text = "Last name";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Maroon;
-            this.label6.Location = new System.Drawing.Point(83, 265);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 15);
-            this.label6.TabIndex = 34;
-            this.label6.Text = "Address";
-            // 
-            // textBoxFname
-            // 
-            this.textBoxFname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.textBoxFname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxFname.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxFname.Location = new System.Drawing.Point(160, 88);
-            this.textBoxFname.Name = "textBoxFname";
-            this.textBoxFname.Size = new System.Drawing.Size(125, 20);
-            this.textBoxFname.TabIndex = 27;
-            // 
-            // textBoxID
-            // 
-            this.textBoxID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.textBoxID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxID.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxID.ForeColor = System.Drawing.Color.Red;
-            this.textBoxID.Location = new System.Drawing.Point(161, 56);
-            this.textBoxID.Name = "textBoxID";
-            this.textBoxID.Size = new System.Drawing.Size(67, 20);
-            this.textBoxID.TabIndex = 23;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Maroon;
-            this.label8.Location = new System.Drawing.Point(108, 193);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(36, 15);
-            this.label8.TabIndex = 38;
-            this.label8.Text = "DOB";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Maroon;
-            this.label7.Location = new System.Drawing.Point(79, 27);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 15);
-            this.label7.TabIndex = 36;
-            this.label7.Text = "Position";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.radioMale);
-            this.panel2.Controls.Add(this.radioFemale);
-            this.panel2.Location = new System.Drawing.Point(160, 149);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(131, 28);
-            this.panel2.TabIndex = 40;
-            // 
-            // radioMale
-            // 
-            this.radioMale.AutoSize = true;
-            this.radioMale.Checked = true;
-            this.radioMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioMale.Location = new System.Drawing.Point(3, 3);
-            this.radioMale.Name = "radioMale";
-            this.radioMale.Size = new System.Drawing.Size(48, 17);
-            this.radioMale.TabIndex = 5;
-            this.radioMale.TabStop = true;
-            this.radioMale.Text = "Male";
-            this.radioMale.UseVisualStyleBackColor = true;
-            // 
-            // radioFemale
-            // 
-            this.radioFemale.AutoSize = true;
-            this.radioFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioFemale.Location = new System.Drawing.Point(66, 3);
-            this.radioFemale.Name = "radioFemale";
-            this.radioFemale.Size = new System.Drawing.Size(59, 17);
-            this.radioFemale.TabIndex = 6;
-            this.radioFemale.Text = "Female";
-            this.radioFemale.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Maroon;
-            this.label5.Location = new System.Drawing.Point(41, 228);
-            this.label5.Name = "label5";
-            this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label5.Size = new System.Drawing.Size(106, 15);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "Phone contact";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Maroon;
-            this.label9.Location = new System.Drawing.Point(87, 151);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 15);
-            this.label9.TabIndex = 41;
-            this.label9.Text = "Gender";
-            // 
-            // textBoxAddress
-            // 
-            this.textBoxAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.textBoxAddress.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxAddress.Location = new System.Drawing.Point(160, 266);
-            this.textBoxAddress.Multiline = true;
-            this.textBoxAddress.Name = "textBoxAddress";
-            this.textBoxAddress.Size = new System.Drawing.Size(254, 75);
-            this.textBoxAddress.TabIndex = 33;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Maroon;
-            this.label2.Location = new System.Drawing.Point(63, 87);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 15);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "First name";
-            // 
-            // textBoxLname
-            // 
-            this.textBoxLname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.textBoxLname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxLname.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxLname.Location = new System.Drawing.Point(160, 117);
-            this.textBoxLname.Name = "textBoxLname";
-            this.textBoxLname.Size = new System.Drawing.Size(125, 20);
-            this.textBoxLname.TabIndex = 28;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Maroon;
-            this.label4.Location = new System.Drawing.Point(121, 54);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(23, 15);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "ID";
-            // 
-            // textBoxPhone
-            // 
-            this.textBoxPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.textBoxPhone.Font = new System.Drawing.Font("Lucida Fax", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPhone.Location = new System.Drawing.Point(160, 229);
-            this.textBoxPhone.Name = "textBoxPhone";
-            this.textBoxPhone.Size = new System.Drawing.Size(254, 20);
-            this.textBoxPhone.TabIndex = 32;
-            // 
-            // buttonFindID
-            // 
-            this.buttonFindID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.buttonFindID.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonFindID.ForeColor = System.Drawing.Color.Red;
-            this.buttonFindID.Location = new System.Drawing.Point(235, 55);
-            this.buttonFindID.Name = "buttonFindID";
-            this.buttonFindID.Size = new System.Drawing.Size(51, 25);
-            this.buttonFindID.TabIndex = 25;
-            this.buttonFindID.Text = "Find";
-            this.buttonFindID.UseVisualStyleBackColor = false;
-            this.buttonFindID.Click += new System.EventHandler(this.buttonFindID_Click);
             // 
             // buttonSetInfor
             // 
@@ -618,6 +253,7 @@ namespace Management_Hotel.View.ViewManager
             // 
             // panel5
             // 
+            this.panel5.BackColor = System.Drawing.Color.DarkGray;
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
@@ -673,23 +309,23 @@ namespace Management_Hotel.View.ViewManager
             this.dataGridViewEmployee.BackgroundColor = System.Drawing.Color.DarkGray;
             this.dataGridViewEmployee.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridViewEmployee.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewEmployee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewEmployee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkGray;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Lucida Handwriting", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewEmployee.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Lucida Handwriting", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewEmployee.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewEmployee.GridColor = System.Drawing.Color.Gray;
             this.dataGridViewEmployee.Location = new System.Drawing.Point(0, 0);
@@ -777,7 +413,7 @@ namespace Management_Hotel.View.ViewManager
             // 
             // panelBackControl
             // 
-            this.panelBackControl.BackColor = System.Drawing.Color.DimGray;
+            this.panelBackControl.BackColor = System.Drawing.Color.DarkGray;
             this.panelBackControl.Controls.Add(this.buttonBackEdit);
             this.panelBackControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBackControl.Location = new System.Drawing.Point(0, 0);
@@ -787,10 +423,9 @@ namespace Management_Hotel.View.ViewManager
             // 
             // buttonBackEdit
             // 
-            this.buttonBackEdit.BackColor = System.Drawing.Color.DimGray;
-            this.buttonBackEdit.ForeColor = System.Drawing.Color.Silver;
+            this.buttonBackEdit.BackColor = System.Drawing.Color.DarkGray;
             this.buttonBackEdit.IconChar = FontAwesome.Sharp.IconChar.ArrowCircleLeft;
-            this.buttonBackEdit.IconColor = System.Drawing.Color.Silver;
+            this.buttonBackEdit.IconColor = System.Drawing.Color.White;
             this.buttonBackEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.buttonBackEdit.Location = new System.Drawing.Point(0, 6);
             this.buttonBackEdit.Name = "buttonBackEdit";
@@ -827,13 +462,6 @@ namespace Management_Hotel.View.ViewManager
             ((System.ComponentModel.ISupportInitialize)(this.buttonLeft)).EndInit();
             this.panelSet.ResumeLayout(false);
             this.panelButton.ResumeLayout(false);
-            this.panelShowAccount.ResumeLayout(false);
-            this.panelShowAccount.PerformLayout();
-            this.panelShowInfor.ResumeLayout(false);
-            this.panelShowInfor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAvatar)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panelControl.ResumeLayout(false);
             this.panelShow.ResumeLayout(false);
             this.panelDataGrid.ResumeLayout(false);
@@ -855,35 +483,8 @@ namespace Management_Hotel.View.ViewManager
         private FontAwesome.Sharp.IconPictureBox buttonLeft;
         private System.Windows.Forms.Panel panelSet;
         private System.Windows.Forms.Panel panelShowAccount;
-        private System.Windows.Forms.CheckBox checkBoxShow;
-        private System.Windows.Forms.TextBox textBoxConfirm;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBoxPass;
-        private System.Windows.Forms.TextBox textBoxUser;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
         private FontAwesome.Sharp.IconButton buttonSetAcc;
         private System.Windows.Forms.Panel panelShowInfor;
-        private System.Windows.Forms.DateTimePicker dateDOB;
-        private System.Windows.Forms.ComboBox comboBoxPos;
-        private System.Windows.Forms.Button buttonUpload;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBoxFname;
-        private System.Windows.Forms.TextBox textBoxID;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.RadioButton radioMale;
-        private System.Windows.Forms.RadioButton radioFemale;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBoxAddress;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxLname;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBoxPhone;
-        private System.Windows.Forms.Button buttonFindID;
         private FontAwesome.Sharp.IconButton buttonSetInfor;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panelButton;
@@ -891,7 +492,6 @@ namespace Management_Hotel.View.ViewManager
         private FontAwesome.Sharp.IconButton buttonRemove;
         private FontAwesome.Sharp.IconButton buttonEdit;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private FontAwesome.Sharp.IconPictureBox pictureBoxAvatar;
         private FontAwesome.Sharp.IconButton buttonAdd;
         private System.Windows.Forms.Panel panelControl;
         private System.Windows.Forms.Panel panelShow;

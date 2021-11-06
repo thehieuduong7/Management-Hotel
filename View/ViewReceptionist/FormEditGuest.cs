@@ -128,5 +128,10 @@ namespace Management_Hotel.View.ViewReceptionist
         {
             this.buttonCancel.IconSize = 35;
         }
+
+        private void pictureGuest_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

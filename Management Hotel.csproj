@@ -75,29 +75,25 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control DAO\ConnectionController.cs" />
+    <Compile Include="Control DAO\AccountKHDAO.cs" />
+    <Compile Include="Control DAO\KhachHangDAO.cs" />
+    <Compile Include="Control DAO\NhanVienDAO.cs" />
+    <Compile Include="Control DAO\PhongDAO.cs" />
+    <Compile Include="Model\AccountNVModel.cs" />
+    <Compile Include="Model\DatMonModel.cs" />
+    <Compile Include="Model\DatPhongModel.cs" />
+    <Compile Include="Model\KhachHangModel.cs" />
+    <Compile Include="Model\KhoModel.cs" />
+    <Compile Include="Model\NhanVienModel.cs" />
+    <Compile Include="Model\NhapKhoModel.cs" />
+    <Compile Include="Model\PhongModel.cs" />
+    <Compile Include="Model\ThanhToanModel.cs" />
     <Compile Include="View\FormClient.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\FormClient.Designer.cs">
       <DependentUpon>FormClient.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\ViewLabourer\FormCheckInCheckOut.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\ViewLabourer\FormCheckInCheckOut.Designer.cs">
-      <DependentUpon>FormCheckInCheckOut.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\ViewLabourer\FormMenuLabourer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\ViewLabourer\FormMenuLabourer.Designer.cs">
-      <DependentUpon>FormMenuLabourer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\ViewLabourer\FormShowInformation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\ViewLabourer\FormShowInformation.Designer.cs">
-      <DependentUpon>FormShowInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ViewManager\FormAddEmployee.cs">
       <SubType>Form</SubType>
@@ -113,12 +109,6 @@
     <Compile Include="View\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\ViewManager\FormDivisionEmployee.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\ViewManager\FormDivisionEmployee.Designer.cs">
-      <DependentUpon>FormDivisionEmployee.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\ViewManager\FormEditEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,12 +120,6 @@
     </Compile>
     <Compile Include="View\ViewManager\FormMenuManager.Designer.cs">
       <DependentUpon>FormMenuManager.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\ViewManager\FormReportEmployee.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\ViewManager\FormReportEmployee.Designer.cs">
-      <DependentUpon>FormReportEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ViewReceptionist\CtrUser\ControlAddFood.cs">
       <SubType>UserControl</SubType>
@@ -284,15 +268,6 @@
     <EmbeddedResource Include="View\FormClient.resx">
       <DependentUpon>FormClient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\ViewLabourer\FormCheckInCheckOut.resx">
-      <DependentUpon>FormCheckInCheckOut.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\ViewLabourer\FormMenuLabourer.resx">
-      <DependentUpon>FormMenuLabourer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\ViewLabourer\FormShowInformation.resx">
-      <DependentUpon>FormShowInformation.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\ViewManager\FormAddEmployee.resx">
       <DependentUpon>FormAddEmployee.cs</DependentUpon>
     </EmbeddedResource>
@@ -310,17 +285,11 @@
     <EmbeddedResource Include="View\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\ViewManager\FormDivisionEmployee.resx">
-      <DependentUpon>FormDivisionEmployee.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\ViewManager\FormEditEmployee.resx">
       <DependentUpon>FormEditEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ViewManager\FormMenuManager.resx">
       <DependentUpon>FormMenuManager.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\ViewManager\FormReportEmployee.resx">
-      <DependentUpon>FormReportEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ViewReceptionist\CtrUser\ControlAddFood.resx">
       <DependentUpon>ControlAddFood.cs</DependentUpon>
@@ -414,9 +383,6 @@
     <Content Include="Image\empty.jpg" />
     <Content Include="Image\login.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Control\" />
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

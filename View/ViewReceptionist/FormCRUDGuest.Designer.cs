@@ -29,9 +29,9 @@ namespace Management_Hotel.View.ViewReceptionist
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelShow = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
@@ -42,9 +42,9 @@ namespace Management_Hotel.View.ViewReceptionist
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.dataGridViewGuest = new System.Windows.Forms.DataGridView();
             this.panelControl = new System.Windows.Forms.Panel();
-            this.buttonReset = new FontAwesome.Sharp.IconButton();
             this.buttonAdd = new FontAwesome.Sharp.IconButton();
             this.panelStatic = new System.Windows.Forms.Panel();
+            this.buttonReset = new FontAwesome.Sharp.IconButton();
             this.panelShow.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
@@ -162,34 +162,34 @@ namespace Management_Hotel.View.ViewReceptionist
             this.dataGridViewGuest.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewGuest.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridViewGuest.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewGuest.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewGuest.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewGuest.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Lucida Handwriting", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewGuest.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Lucida Handwriting", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewGuest.DefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewGuest.EnableHeadersVisualStyles = false;
             this.dataGridViewGuest.Location = new System.Drawing.Point(55, 241);
             this.dataGridViewGuest.Name = "dataGridViewGuest";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewGuest.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Lucida Fax", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewGuest.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridViewGuest.RowHeadersVisible = false;
             this.dataGridViewGuest.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dataGridViewGuest.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -210,27 +210,6 @@ namespace Management_Hotel.View.ViewReceptionist
             this.panelControl.Name = "panelControl";
             this.panelControl.Size = new System.Drawing.Size(200, 641);
             this.panelControl.TabIndex = 5;
-            // 
-            // buttonReset
-            // 
-            this.buttonReset.BackColor = System.Drawing.Color.DimGray;
-            this.buttonReset.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonReset.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonReset.ForeColor = System.Drawing.Color.Silver;
-            this.buttonReset.IconChar = FontAwesome.Sharp.IconChar.RedoAlt;
-            this.buttonReset.IconColor = System.Drawing.Color.Silver;
-            this.buttonReset.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.buttonReset.IconSize = 40;
-            this.buttonReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonReset.Location = new System.Drawing.Point(0, 203);
-            this.buttonReset.Name = "buttonReset";
-            this.buttonReset.Size = new System.Drawing.Size(200, 63);
-            this.buttonReset.TabIndex = 44;
-            this.buttonReset.Text = "New guest";
-            this.buttonReset.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonReset.UseVisualStyleBackColor = false;
-            this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
             // 
             // buttonAdd
             // 
@@ -261,6 +240,27 @@ namespace Management_Hotel.View.ViewReceptionist
             this.panelStatic.Name = "panelStatic";
             this.panelStatic.Size = new System.Drawing.Size(200, 140);
             this.panelStatic.TabIndex = 43;
+            // 
+            // buttonReset
+            // 
+            this.buttonReset.BackColor = System.Drawing.Color.DimGray;
+            this.buttonReset.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonReset.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonReset.ForeColor = System.Drawing.Color.Silver;
+            this.buttonReset.IconChar = FontAwesome.Sharp.IconChar.RedoAlt;
+            this.buttonReset.IconColor = System.Drawing.Color.Silver;
+            this.buttonReset.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.buttonReset.IconSize = 40;
+            this.buttonReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonReset.Location = new System.Drawing.Point(0, 203);
+            this.buttonReset.Name = "buttonReset";
+            this.buttonReset.Size = new System.Drawing.Size(200, 63);
+            this.buttonReset.TabIndex = 47;
+            this.buttonReset.Text = "New guest";
+            this.buttonReset.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonReset.UseVisualStyleBackColor = false;
+            this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
             // 
             // FormCRUDGuest
             // 

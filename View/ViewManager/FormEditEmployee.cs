@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Management_Hotel.Control;
-using Management_Hotel.Control.ControlManager;
 using Management_Hotel.Model;
 
 namespace Management_Hotel.View.ViewManager
