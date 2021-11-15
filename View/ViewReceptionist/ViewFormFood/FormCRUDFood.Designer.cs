@@ -29,32 +29,22 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelShow = new System.Windows.Forms.Panel();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panelControl = new System.Windows.Forms.Panel();
-            this.panelStatic = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.panelStatic = new System.Windows.Forms.Panel();
+            this.panelShow = new System.Windows.Forms.Panel();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panelControl.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panelShow
-            // 
-            this.panelShow.AccessibleDescription = ".";
-            this.panelShow.AutoScroll = true;
-            this.panelShow.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelShow.Location = new System.Drawing.Point(200, 152);
-            this.panelShow.Name = "panelShow";
-            this.panelShow.Size = new System.Drawing.Size(980, 528);
-            this.panelShow.TabIndex = 6;
             // 
             // panelLogo
             // 
@@ -64,14 +54,14 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
             this.panelLogo.Location = new System.Drawing.Point(200, 0);
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(980, 152);
-            this.panelLogo.TabIndex = 4;
+            this.panelLogo.TabIndex = 7;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Silver;
-            this.label1.Location = new System.Drawing.Point(179, 26);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(178, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(563, 55);
             this.label1.TabIndex = 1;
@@ -79,15 +69,15 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
             // 
             // iconPictureBox1
             // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.DimGray;
-            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Apple;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 41;
-            this.iconPictureBox1.Location = new System.Drawing.Point(113, 40);
+            this.iconPictureBox1.IconSize = 55;
+            this.iconPictureBox1.Location = new System.Drawing.Point(124, 45);
             this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(46, 41);
+            this.iconPictureBox1.Size = new System.Drawing.Size(58, 55);
             this.iconPictureBox1.TabIndex = 0;
             this.iconPictureBox1.TabStop = false;
             // 
@@ -100,20 +90,22 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
             this.panelControl.Location = new System.Drawing.Point(0, 0);
             this.panelControl.Name = "panelControl";
             this.panelControl.Size = new System.Drawing.Size(200, 680);
-            this.panelControl.TabIndex = 5;
+            this.panelControl.TabIndex = 8;
             // 
-            // panelStatic
+            // label3
             // 
-            this.panelStatic.AutoScroll = true;
-            this.panelStatic.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelStatic.Location = new System.Drawing.Point(0, 0);
-            this.panelStatic.Name = "panelStatic";
-            this.panelStatic.Size = new System.Drawing.Size(200, 249);
-            this.panelStatic.TabIndex = 43;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Constantia", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(17, 267);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(118, 23);
+            this.label3.TabIndex = 46;
+            this.label3.Text = "Search Food";
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Silver;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.panel2.Controls.Add(this.textBoxSearch);
             this.panel2.Controls.Add(this.iconPictureBox2);
             this.panel2.Location = new System.Drawing.Point(21, 293);
@@ -123,7 +115,7 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.BackColor = System.Drawing.Color.Silver;
+            this.textBoxSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.textBoxSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSearch.Location = new System.Drawing.Point(29, 3);
@@ -134,7 +126,7 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
             // 
             // iconPictureBox2
             // 
-            this.iconPictureBox2.BackColor = System.Drawing.Color.Silver;
+            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.iconPictureBox2.ForeColor = System.Drawing.Color.Black;
             this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Search;
             this.iconPictureBox2.IconColor = System.Drawing.Color.Black;
@@ -147,22 +139,30 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
             this.iconPictureBox2.TabIndex = 7;
             this.iconPictureBox2.TabStop = false;
             // 
-            // label3
+            // panelStatic
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Constantia", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Silver;
-            this.label3.Location = new System.Drawing.Point(17, 267);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 23);
-            this.label3.TabIndex = 46;
-            this.label3.Text = "Search Food";
+            this.panelStatic.AutoScroll = true;
+            this.panelStatic.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelStatic.Location = new System.Drawing.Point(0, 0);
+            this.panelStatic.Name = "panelStatic";
+            this.panelStatic.Size = new System.Drawing.Size(200, 249);
+            this.panelStatic.TabIndex = 43;
+            // 
+            // panelShow
+            // 
+            this.panelShow.AccessibleDescription = ".";
+            this.panelShow.AutoScroll = true;
+            this.panelShow.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelShow.Location = new System.Drawing.Point(200, 152);
+            this.panelShow.Name = "panelShow";
+            this.panelShow.Size = new System.Drawing.Size(980, 528);
+            this.panelShow.TabIndex = 10;
             // 
             // FormCRUDFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1180, 680);
             this.Controls.Add(this.panelShow);
             this.Controls.Add(this.panelLogo);
@@ -183,16 +183,15 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panelShow;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Panel panelControl;
-        private System.Windows.Forms.Panel panelStatic;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox textBoxSearch;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panelStatic;
+        private System.Windows.Forms.Panel panelShow;
     }
 }

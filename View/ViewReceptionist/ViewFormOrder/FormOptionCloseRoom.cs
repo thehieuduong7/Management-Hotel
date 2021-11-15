@@ -1,4 +1,4 @@
-﻿using Management_Hotel.Control.ControlReceptionist;
+﻿using Management_Hotel.Control_DAO;
 using Management_Hotel.Model;
 using System;
 using System.Collections.Generic;
@@ -14,47 +14,48 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
 {
     public partial class FormOptionCloseRoom : Form
     {
-        CtrOrderRoom ctrOrder;
-        public Room room { get; set; }
+        int id_phong;
         public FormOrderRoom formParent { get; set; }
         public FormOptionCloseRoom()
         {
             InitializeComponent();
-            this.ctrOrder = new CtrOrderRoom();
         }
-  
-        private void buttonCancel_Click(object sender, EventArgs e)
+        public void fillData(int id_phong)
         {
-            this.Close();
+            this.id_phong=id_phong;
         }
-        private void buttonCancel_MouseMove(object sender, MouseEventArgs e)
-        {
-            this.buttonCancel.IconSize = 40;
-        }
-
-        private void buttonCancel_MouseLeave(object sender, EventArgs e)
-        {
-            this.buttonCancel.IconSize = 35;
-        }
-
         private void buttonOrder_Click(object sender, EventArgs e)
         {
             FormSelectGuest form = new FormSelectGuest();
-            if(form.ShowDialog()==DialogResult.No) return;
-            Guest guest = FormSelectGuest.get_select_guest();
-            DateTime day_order = DateTime.Now;
-            string id_order = ctrOrder.hash_id_order(room.id_phong, guest.id_guest, day_order);
-            OrderRoom order = new OrderRoom(id_order, room.id_phong, guest.id_guest, day_order, "Open");
-            if (ctrOrder.insertRoom(order))
+            if (form.ShowDialog() == DialogResult.No)
             {
-                MessageBox.Show("Success", "Management Hotel",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
-            else
+            int id_guest = FormSelectGuest.get_id_guesst();
+            try
             {
-                MessageBox.Show("Fail", "Management Hotel", 
+                if (DatPhongDAO.DatPhong_add_proc(id_guest,this.id_phong,GlobalUser.nhanVien.ID,null))
+                {
+                    MessageBox.Show("Dat phong success", "Management Hotel",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.formParent.init();
+                    this.Close();
+                }
+                else
+                {
+                    throw new FormatException();
+                }
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Fail", "Management Hotel",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

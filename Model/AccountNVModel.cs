@@ -7,7 +7,7 @@ using System.Data;
 
 namespace Management_Hotel.Model
 {
-    class AccountNVModel
+    public class AccountNVModel
     {
         String username { get; set; }
 

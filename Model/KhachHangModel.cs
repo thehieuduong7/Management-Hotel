@@ -44,7 +44,7 @@ namespace Management_Hotel.Model
             NgaySinh = DateTime.Parse(row[3].ToString());
             SDT= row[4].ToString().Trim();
             GioiTinh= row[5].ToString().Trim();
-            Avatar = CvtByteToImg((byte[])row[6]);
+            Avatar = CvtToImg((byte[])row[6]);
         }
 
         public KhachHangModel(int id_kh, string ho, string ten, DateTime ngaySinh, string sDT, string gioiTinh, Image avatar)

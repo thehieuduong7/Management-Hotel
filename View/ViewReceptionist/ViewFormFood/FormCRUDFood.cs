@@ -1,4 +1,4 @@
-﻿using Management_Hotel.Control.ControlReceptionist;
+﻿using Management_Hotel.Control_DAO;
 using Management_Hotel.Model;
 using Management_Hotel.View.ViewReceptionist.CtrUser;
 using System;
@@ -18,27 +18,27 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
         public FormCRUDFood()
         {
             InitializeComponent();
-            ctrFood = new CtrCRUDFood();
-            fillDataRoom(ctrFood.getDataFood());
+            init();
         }
-        CtrCRUDFood ctrFood;
-        public void reset()
+        public void init()
         {
-            fillDataRoom(ctrFood.getDataFood());
+            DataTable data = KhoDAO.Kho_detail_view();
+            fillData(data);
         }
-        private void fillDataRoom(DataTable data)
+        public void fillData(DataTable data)
         {
+
             if (data == null) return;
             Panel panel = new Panel();
             this.panelShow.Controls.Clear();
-            for (int i = 0; i < data.Rows.Count+1; i++)
+            for (int i = 0; i < data.Rows.Count + 1; i++)
             {
                 if (i % 6 == 0)
                 {
                     panel = new Panel();
                     this.panelShow.Controls.Add(panel);
                     panel.Dock = DockStyle.Top;
-                    panel.Height = 155;
+                    panel.Height = 175;
                     panel.BringToFront();
                 }
                 if (i == data.Rows.Count)
@@ -50,11 +50,11 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
                     control.BringToFront();
                 }
                 else
-                { 
-                    Food food = new Food(data.Rows[i].ItemArray);
+                {
+                    int id = int.Parse(data.Rows[i][0].ToString());
                     ControlCRUDFood control = new ControlCRUDFood();
                     control.formParent = this;
-                    control.setFood(food);
+                    control.fillData(id);
                     panel.Controls.Add(control);
                     control.Dock = DockStyle.Left;
                     control.BringToFront();
@@ -64,10 +64,9 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
-            DataTable data = ctrFood.getDataFood();
             string search = this.textBoxSearch.Text.Trim();
-            data.DefaultView.RowFilter = string.Format("name_food like '{0}%'", search);
-            fillDataRoom(data.DefaultView.ToTable());
+            DataTable data = KhoDAO.Kho_searchFilter_func(search);
+            fillData(data);
         }
     }
 }

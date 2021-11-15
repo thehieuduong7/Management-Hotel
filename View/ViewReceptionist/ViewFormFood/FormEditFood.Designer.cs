@@ -32,7 +32,7 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormFood
             this.buttonEdit = new FontAwesome.Sharp.IconButton();
             this.label4 = new System.Windows.Forms.Label();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.textBoxPrice = new System.Windows.Forms.TextBox();
+            this.textBoxRealPrice = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.numericAmount = new System.Windows.Forms.NumericUpDown();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -46,6 +46,9 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormFood
             this.buttonClose = new FontAwesome.Sharp.IconButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.buttonRemove = new FontAwesome.Sharp.IconButton();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.textBoxPrice = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericAmount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureFood)).BeginInit();
             this.SuspendLayout();
@@ -53,18 +56,18 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormFood
             // buttonEdit
             // 
             this.buttonEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.buttonEdit.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEdit.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEdit.ForeColor = System.Drawing.Color.Red;
             this.buttonEdit.IconChar = FontAwesome.Sharp.IconChar.Save;
             this.buttonEdit.IconColor = System.Drawing.Color.Red;
             this.buttonEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.buttonEdit.IconSize = 30;
             this.buttonEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEdit.Location = new System.Drawing.Point(509, 111);
+            this.buttonEdit.Location = new System.Drawing.Point(535, 130);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(113, 50);
+            this.buttonEdit.Size = new System.Drawing.Size(123, 50);
             this.buttonEdit.TabIndex = 113;
-            this.buttonEdit.Text = "Edit";
+            this.buttonEdit.Text = "Chỉnh sửa";
             this.buttonEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonEdit.UseVisualStyleBackColor = false;
@@ -74,46 +77,46 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormFood
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(202, 104);
+            this.label4.Location = new System.Drawing.Point(189, 116);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 17);
+            this.label4.Size = new System.Drawing.Size(77, 17);
             this.label4.TabIndex = 112;
-            this.label4.Text = "Amount:";
+            this.label4.Text = "Số lượng:";
             // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.BackColor = System.Drawing.Color.Black;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(275, 158);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(274, 168);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(211, 3);
             this.flowLayoutPanel3.TabIndex = 111;
             // 
-            // textBoxPrice
+            // textBoxRealPrice
             // 
-            this.textBoxPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.textBoxPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPrice.Location = new System.Drawing.Point(275, 141);
-            this.textBoxPrice.Name = "textBoxPrice";
-            this.textBoxPrice.Size = new System.Drawing.Size(211, 19);
-            this.textBoxPrice.TabIndex = 110;
+            this.textBoxRealPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textBoxRealPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxRealPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxRealPrice.Location = new System.Drawing.Point(274, 151);
+            this.textBoxRealPrice.Name = "textBoxRealPrice";
+            this.textBoxRealPrice.Size = new System.Drawing.Size(211, 19);
+            this.textBoxRealPrice.TabIndex = 110;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(219, 143);
+            this.label3.Location = new System.Drawing.Point(199, 154);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 17);
+            this.label3.Size = new System.Drawing.Size(69, 17);
             this.label3.TabIndex = 109;
-            this.label3.Text = "Price:";
+            this.label3.Text = "Giá gốc:";
             // 
             // numericAmount
             // 
             this.numericAmount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.numericAmount.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.numericAmount.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericAmount.Location = new System.Drawing.Point(273, 104);
+            this.numericAmount.Location = new System.Drawing.Point(274, 117);
             this.numericAmount.Name = "numericAmount";
             this.numericAmount.Size = new System.Drawing.Size(43, 19);
             this.numericAmount.TabIndex = 108;
@@ -121,7 +124,7 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormFood
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.Black;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(275, 71);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(274, 81);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(211, 3);
             this.flowLayoutPanel1.TabIndex = 107;
@@ -131,7 +134,7 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormFood
             this.textBoxName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.textBoxName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxName.Location = new System.Drawing.Point(275, 54);
+            this.textBoxName.Location = new System.Drawing.Point(274, 64);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(211, 19);
             this.textBoxName.TabIndex = 106;
@@ -140,16 +143,16 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormFood
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(178, 57);
+            this.label1.Location = new System.Drawing.Point(190, 67);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 17);
+            this.label1.Size = new System.Drawing.Size(76, 17);
             this.label1.TabIndex = 105;
-            this.label1.Text = "Name food:";
+            this.label1.Text = "Tên món:";
             // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.BackColor = System.Drawing.Color.Black;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(275, 29);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(274, 39);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(211, 3);
             this.flowLayoutPanel2.TabIndex = 104;
@@ -160,7 +163,7 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormFood
             this.textBoxID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.textBoxID.Location = new System.Drawing.Point(275, 12);
+            this.textBoxID.Location = new System.Drawing.Point(274, 22);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.ReadOnly = true;
             this.textBoxID.Size = new System.Drawing.Size(211, 19);
@@ -170,7 +173,7 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormFood
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(200, 15);
+            this.label2.Location = new System.Drawing.Point(199, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 17);
             this.label2.TabIndex = 102;
@@ -186,7 +189,7 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormFood
             this.buttonUpload.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.buttonUpload.IconSize = 30;
             this.buttonUpload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonUpload.Location = new System.Drawing.Point(22, 140);
+            this.buttonUpload.Location = new System.Drawing.Point(21, 150);
             this.buttonUpload.Name = "buttonUpload";
             this.buttonUpload.Size = new System.Drawing.Size(147, 35);
             this.buttonUpload.TabIndex = 101;
@@ -200,14 +203,15 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormFood
             // 
             this.pictureFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.pictureFood.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureFood.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.pictureFood.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.pictureFood.IconColor = System.Drawing.SystemColors.ControlText;
+            this.pictureFood.ForeColor = System.Drawing.Color.Red;
+            this.pictureFood.IconChar = FontAwesome.Sharp.IconChar.Apple;
+            this.pictureFood.IconColor = System.Drawing.Color.Red;
             this.pictureFood.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.pictureFood.IconSize = 129;
-            this.pictureFood.Location = new System.Drawing.Point(22, 12);
+            this.pictureFood.Location = new System.Drawing.Point(21, 22);
             this.pictureFood.Name = "pictureFood";
             this.pictureFood.Size = new System.Drawing.Size(147, 129);
+            this.pictureFood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureFood.TabIndex = 100;
             this.pictureFood.TabStop = false;
             // 
@@ -222,7 +226,7 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormFood
             this.buttonClose.IconColor = System.Drawing.Color.Red;
             this.buttonClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.buttonClose.IconSize = 30;
-            this.buttonClose.Location = new System.Drawing.Point(601, 0);
+            this.buttonClose.Location = new System.Drawing.Point(631, 5);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(36, 36);
             this.buttonClose.TabIndex = 115;
@@ -236,35 +240,66 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormFood
             // buttonRemove
             // 
             this.buttonRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.buttonRemove.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRemove.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRemove.ForeColor = System.Drawing.Color.Red;
             this.buttonRemove.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
             this.buttonRemove.IconColor = System.Drawing.Color.Red;
             this.buttonRemove.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.buttonRemove.IconSize = 30;
             this.buttonRemove.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonRemove.Location = new System.Drawing.Point(509, 158);
+            this.buttonRemove.Location = new System.Drawing.Point(535, 177);
             this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(113, 50);
+            this.buttonRemove.Size = new System.Drawing.Size(123, 50);
             this.buttonRemove.TabIndex = 116;
-            this.buttonRemove.Text = "Remove";
+            this.buttonRemove.Text = "Xoá";
             this.buttonRemove.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonRemove.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonRemove.UseVisualStyleBackColor = false;
             this.buttonRemove.Click += new System.EventHandler(this.buttonCancel_Click);
+            // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.BackColor = System.Drawing.Color.Black;
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(272, 216);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(211, 3);
+            this.flowLayoutPanel4.TabIndex = 119;
+            // 
+            // textBoxPrice
+            // 
+            this.textBoxPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textBoxPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPrice.Location = new System.Drawing.Point(272, 199);
+            this.textBoxPrice.Name = "textBoxPrice";
+            this.textBoxPrice.Size = new System.Drawing.Size(211, 19);
+            this.textBoxPrice.TabIndex = 118;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(196, 199);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(70, 17);
+            this.label5.TabIndex = 117;
+            this.label5.Text = "Giá bán:";
             // 
             // FormEditFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(634, 213);
+            this.ClientSize = new System.Drawing.Size(670, 243);
+            this.Controls.Add(this.flowLayoutPanel4);
+            this.Controls.Add(this.textBoxPrice);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.buttonRemove);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.flowLayoutPanel3);
-            this.Controls.Add(this.textBoxPrice);
+            this.Controls.Add(this.textBoxRealPrice);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.numericAmount);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -290,7 +325,7 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormFood
         private FontAwesome.Sharp.IconButton buttonEdit;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
-        private System.Windows.Forms.TextBox textBoxPrice;
+        private System.Windows.Forms.TextBox textBoxRealPrice;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown numericAmount;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
@@ -304,5 +339,8 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormFood
         private FontAwesome.Sharp.IconButton buttonClose;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private FontAwesome.Sharp.IconButton buttonRemove;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
+        private System.Windows.Forms.TextBox textBoxPrice;
+        private System.Windows.Forms.Label label5;
     }
 }

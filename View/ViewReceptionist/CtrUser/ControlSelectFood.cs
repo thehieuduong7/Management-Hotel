@@ -17,22 +17,21 @@ namespace Management_Hotel.View.ViewReceptionist.CtrUser
         {
             InitializeComponent();
         }
-        int max;
-        Food food;
-        public Food GetFood()
+        public int id { get; set; }
+        String tenMon;public float Gia { get; set; }
+        int max; Image image;
+        public int soLuong { get; set; }
+        public bool fillData(int id, String tenMon,float Gia,int max,Image image)
         {
-            return food;
-        }
-        public bool fillData(Food food)
-        {
-            if (food.amount == 0) return false;
-            this.food = food;
-            this.labelID.Text = string.Format("ID: {0}",food.id_food);
-            this.labelName.Text = string.Format("Name: {0}", food.name_food);
-            this.labelPrice.Text = string.Format("Price: {0}d", food.price);
-            this.pictureFood.Image = food.picture;
-            this.max = food.amount;
-            this.labelAmount.Text = "1";
+            this.id = id; this.tenMon = tenMon; this.Gia = Gia; this.max = max; this.image = image;
+            if (max == 0) return false;
+            this.labelID.Text = string.Format("ID: {0}",id);
+            this.labelName.Text = string.Format("Name: {0}", tenMon);
+            this.labelPrice.Text = string.Format("Price: {0}d", Gia);
+            this.pictureFood.Image = image;
+            this.max = max;
+            this.soLuong = 1;
+            this.labelAmount.Text =this.soLuong.ToString();
             return true;
         }
         private void buttonClose_Click(object sender, EventArgs e)
@@ -52,11 +51,12 @@ namespace Management_Hotel.View.ViewReceptionist.CtrUser
 
         public void buttonPlus_Click(object sender, EventArgs e)
         {
-            int amount = int.Parse(this.labelAmount.Text);
-            if(amount<this.max)
+            
+            if(this.soLuong<this.max)
             {
-                amount++;
-                this.labelAmount.Text = amount.ToString();
+                this.soLuong++;
+                this.labelAmount.Text = this.soLuong.ToString();
+                
             }
             else
             {
@@ -65,19 +65,14 @@ namespace Management_Hotel.View.ViewReceptionist.CtrUser
 
         private void buttonMinus_Click(object sender, EventArgs e)
         {
-            int amount = int.Parse(this.labelAmount.Text);
-            if (amount > 1)
+            if (this.soLuong > 1)
             {
-                amount--;
-                this.labelAmount.Text = amount.ToString();
+                this.soLuong--;
+                this.labelAmount.Text = this.soLuong.ToString();
             }
             else
             {
             }
-        }
-        public int getNum()
-        {
-            return int.Parse(this.labelAmount.Text);
         }
     }
 }

@@ -31,11 +31,9 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
         {
             this.buttonCancel = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.buttonSwapRoom = new FontAwesome.Sharp.IconButton();
             this.buttonOrderFood = new FontAwesome.Sharp.IconButton();
             this.buttonPayRoom = new FontAwesome.Sharp.IconButton();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonCancel
@@ -68,19 +66,6 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
             this.label1.Size = new System.Drawing.Size(110, 31);
             this.label1.TabIndex = 97;
             this.label1.Text = "Option";
-            // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.Location = new System.Drawing.Point(36, 51);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.iconPictureBox1.TabIndex = 96;
-            this.iconPictureBox1.TabStop = false;
             // 
             // buttonSwapRoom
             // 
@@ -158,13 +143,11 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
             this.Controls.Add(this.buttonOrderFood);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.iconPictureBox1);
             this.Controls.Add(this.buttonSwapRoom);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormOptionOpenRoom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormOptionOpenRoom";
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,7 +157,6 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
 
         private FontAwesome.Sharp.IconButton buttonCancel;
         private System.Windows.Forms.Label label1;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private FontAwesome.Sharp.IconButton buttonSwapRoom;
         private FontAwesome.Sharp.IconButton buttonOrderFood;
         private FontAwesome.Sharp.IconButton buttonPayRoom;

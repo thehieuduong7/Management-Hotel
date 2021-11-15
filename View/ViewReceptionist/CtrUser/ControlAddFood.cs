@@ -23,11 +23,8 @@ namespace Management_Hotel.View.ViewReceptionist.CtrUser
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             FormAddFood form = new FormAddFood();
-            if (form.ShowDialog() == DialogResult.No) return;
-            if (formParent != null)
-            {
-                formParent.reset();
-            }
+            if (form.ShowDialog() == DialogResult.OK)
+                formParent.init();
         }
     }
 }

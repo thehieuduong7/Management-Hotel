@@ -35,18 +35,14 @@ namespace Management_Hotel.View
             this.buttonLogin = new System.Windows.Forms.Button();
             this.textBoxPass = new System.Windows.Forms.TextBox();
             this.textBoxUser = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.radioManager = new System.Windows.Forms.RadioButton();
-            this.radioLabour = new System.Windows.Forms.RadioButton();
-            this.radioRecept = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.buttonExit = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -73,7 +69,7 @@ namespace Management_Hotel.View
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.BackColor = System.Drawing.Color.Black;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(151, 161);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(159, 161);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(233, 3);
             this.flowLayoutPanel2.TabIndex = 9;
@@ -81,7 +77,7 @@ namespace Management_Hotel.View
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.Black;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(151, 112);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(159, 112);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(233, 3);
             this.flowLayoutPanel1.TabIndex = 8;
@@ -90,7 +86,7 @@ namespace Management_Hotel.View
             // 
             this.buttonLogin.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.buttonLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogin.Location = new System.Drawing.Point(273, 186);
+            this.buttonLogin.Location = new System.Drawing.Point(281, 196);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(111, 37);
             this.buttonLogin.TabIndex = 7;
@@ -103,7 +99,7 @@ namespace Management_Hotel.View
             this.textBoxPass.BackColor = System.Drawing.SystemColors.Control;
             this.textBoxPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPass.Location = new System.Drawing.Point(151, 144);
+            this.textBoxPass.Location = new System.Drawing.Point(159, 144);
             this.textBoxPass.Name = "textBoxPass";
             this.textBoxPass.Size = new System.Drawing.Size(233, 19);
             this.textBoxPass.TabIndex = 6;
@@ -114,61 +110,10 @@ namespace Management_Hotel.View
             this.textBoxUser.BackColor = System.Drawing.SystemColors.Control;
             this.textBoxUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxUser.Location = new System.Drawing.Point(151, 93);
+            this.textBoxUser.Location = new System.Drawing.Point(159, 93);
             this.textBoxUser.Name = "textBoxUser";
             this.textBoxUser.Size = new System.Drawing.Size(233, 19);
             this.textBoxUser.TabIndex = 5;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.radioManager);
-            this.panel3.Controls.Add(this.radioLabour);
-            this.panel3.Controls.Add(this.radioRecept);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 30);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(432, 30);
-            this.panel3.TabIndex = 4;
-            // 
-            // radioManager
-            // 
-            this.radioManager.AutoSize = true;
-            this.radioManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioManager.Location = new System.Drawing.Point(230, 5);
-            this.radioManager.Name = "radioManager";
-            this.radioManager.Size = new System.Drawing.Size(70, 21);
-            this.radioManager.TabIndex = 2;
-            this.radioManager.Text = "Admin";
-            this.radioManager.UseVisualStyleBackColor = true;
-            this.radioManager.CheckedChanged += new System.EventHandler(this.radioManager_CheckedChanged);
-            // 
-            // radioLabour
-            // 
-            this.radioLabour.AutoSize = true;
-            this.radioLabour.Checked = true;
-            this.radioLabour.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioLabour.Location = new System.Drawing.Point(3, 6);
-            this.radioLabour.Name = "radioLabour";
-            this.radioLabour.Size = new System.Drawing.Size(114, 21);
-            this.radioLabour.TabIndex = 0;
-            this.radioLabour.TabStop = true;
-            this.radioLabour.Text = "Khách Hàng";
-            this.radioLabour.UseVisualStyleBackColor = true;
-            this.radioLabour.CheckedChanged += new System.EventHandler(this.radioLabour_CheckedChanged);
-            // 
-            // radioRecept
-            // 
-            this.radioRecept.AutoSize = true;
-            this.radioRecept.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioRecept.Location = new System.Drawing.Point(123, 6);
-            this.radioRecept.Name = "radioRecept";
-            this.radioRecept.Size = new System.Drawing.Size(101, 21);
-            this.radioRecept.TabIndex = 1;
-            this.radioRecept.Text = "Nhân Viên";
-            this.radioRecept.UseVisualStyleBackColor = true;
-            this.radioRecept.CheckedChanged += new System.EventHandler(this.radioRecept_CheckedChanged);
             // 
             // panel2
             // 
@@ -228,7 +173,7 @@ namespace Management_Hotel.View
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(68, 147);
+            this.label2.Location = new System.Drawing.Point(76, 147);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 17);
             this.label2.TabIndex = 2;
@@ -238,11 +183,21 @@ namespace Management_Hotel.View
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(64, 96);
+            this.label1.Location = new System.Drawing.Point(72, 96);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Username";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 30);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(432, 30);
+            this.panel3.TabIndex = 4;
             // 
             // FormLogin
             // 
@@ -254,11 +209,10 @@ namespace Management_Hotel.View
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormLogin";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
@@ -267,10 +221,6 @@ namespace Management_Hotel.View
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.RadioButton radioManager;
-        private System.Windows.Forms.RadioButton radioLabour;
-        private System.Windows.Forms.RadioButton radioRecept;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -283,5 +233,6 @@ namespace Management_Hotel.View
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Button buttonExit;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private System.Windows.Forms.Panel panel3;
     }
 }

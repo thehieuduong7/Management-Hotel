@@ -11,15 +11,15 @@ namespace Management_Hotel.Model
 {
     public class NhanVienModel
     {
-        int ID { get; set; }
-        String Ho { get; set; }
-        String Ten { get; set; }
-        DateTime NgaySinh { get; set; }
-        String SDT { get; set; }
-        String GioiTinh { get; set; }
-        float Luong { get; set; }
-        Image Avatar { get; set; }
-        String ChucVu { get; set; }
+        public int ID { get; set; }
+        public String Ho { get; set; }
+        public String Ten { get; set; }
+        public DateTime NgaySinh { get; set; }
+        public String SDT { get; set; }
+        public String GioiTinh { get; set; }
+        public float Luong { get; set; }
+        public Image Avatar { get; set; }
+        public String ChucVu { get; set; }
 
         public Image CvtToImg(byte[] byteImage)
         {
@@ -51,18 +51,6 @@ namespace Management_Hotel.Model
             ChucVu = chucVu;
         }
 
-        public NhanVienModel(DataRow row)
-        {
-            ID = int.Parse(row[0].ToString());
-            Ho = row[1].ToString().Trim();
-            Ten = row[2].ToString().Trim();
-            NgaySinh = DateTime.Parse(row[3].ToString());
-            SDT = row[4].ToString().Trim();
-            GioiTinh = row[5].ToString().Trim();
-            Luong = float.Parse(row[6].ToString());
-            Avatar = CvtByteToImg((byte[])row[7]);
-            ChucVu = row[8].ToString().Trim();
-        }
 
     }
 }

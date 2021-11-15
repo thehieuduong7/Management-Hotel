@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace Management_Hotel.Model
 {
-    class KhoModel
+    public class KhoModel
     {
-        int id_mon { get; set; }
-        String tenMon { get; set; }
-        int soLuong { get; set; }
-        float GiaGoc { get; set; }
-        float giaBan { get; set; }
-        Image photo { get; set; }
+        public int id_mon { get; set; }
+        public String tenMon { get; set; }
+        public int soLuong { get; set; }
+        public float GiaGoc { get; set; }
+        public float giaBan { get; set; }
+        public Image photo { get; set; }
         public Image CvtToImg(byte[] byteImage)
         {
             if (byteImage == null) return null;

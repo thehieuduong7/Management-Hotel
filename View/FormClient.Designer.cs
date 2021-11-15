@@ -31,6 +31,7 @@ namespace Management_Hotel.View
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.panelShow = new System.Windows.Forms.Panel();
             this.panelTop = new System.Windows.Forms.Panel();
             this.labelMess = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -44,7 +45,6 @@ namespace Management_Hotel.View
             this.buttonClose = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBoxLogo = new FontAwesome.Sharp.IconPictureBox();
-            this.panelShow = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelTop.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -55,9 +55,17 @@ namespace Management_Hotel.View
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
+            // panelShow
+            // 
+            this.panelShow.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelShow.Location = new System.Drawing.Point(0, 100);
+            this.panelShow.Name = "panelShow";
+            this.panelShow.Size = new System.Drawing.Size(1380, 680);
+            this.panelShow.TabIndex = 3;
+            // 
             // panelTop
             // 
-            this.panelTop.BackColor = System.Drawing.Color.DimGray;
+            this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.panelTop.Controls.Add(this.labelMess);
             this.panelTop.Controls.Add(this.panel1);
             this.panelTop.Controls.Add(this.panel4);
@@ -66,7 +74,7 @@ namespace Management_Hotel.View
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(1380, 100);
-            this.panelTop.TabIndex = 0;
+            this.panelTop.TabIndex = 2;
             // 
             // labelMess
             // 
@@ -82,7 +90,7 @@ namespace Management_Hotel.View
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.panel1.Controls.Add(this.buttonLogout);
             this.panel1.Controls.Add(this.labelName);
             this.panel1.Controls.Add(this.picAvatar);
@@ -97,7 +105,7 @@ namespace Management_Hotel.View
             this.buttonLogout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.buttonLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLogout.Font = new System.Drawing.Font("Lucida Calligraphy", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogout.ForeColor = System.Drawing.Color.Silver;
+            this.buttonLogout.ForeColor = System.Drawing.Color.Red;
             this.buttonLogout.IconChar = FontAwesome.Sharp.IconChar.None;
             this.buttonLogout.IconColor = System.Drawing.Color.Black;
             this.buttonLogout.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -107,15 +115,12 @@ namespace Management_Hotel.View
             this.buttonLogout.TabIndex = 2;
             this.buttonLogout.Text = "Log out";
             this.buttonLogout.UseVisualStyleBackColor = true;
-            this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
-            this.buttonLogout.MouseLeave += new System.EventHandler(this.buttonLogout_MouseLeave);
-            this.buttonLogout.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button_MouseMove);
             // 
             // labelName
             // 
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName.ForeColor = System.Drawing.Color.White;
+            this.labelName.ForeColor = System.Drawing.Color.Brown;
             this.labelName.Location = new System.Drawing.Point(68, 11);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(67, 15);
@@ -124,7 +129,7 @@ namespace Management_Hotel.View
             // 
             // picAvatar
             // 
-            this.picAvatar.BackColor = System.Drawing.Color.DimGray;
+            this.picAvatar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.picAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picAvatar.Dock = System.Windows.Forms.DockStyle.Left;
             this.picAvatar.Location = new System.Drawing.Point(0, 0);
@@ -157,14 +162,14 @@ namespace Management_Hotel.View
             // 
             // buttonMinimize
             // 
-            this.buttonMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.buttonMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonMinimize.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonMinimize.FlatAppearance.BorderSize = 0;
             this.buttonMinimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.buttonMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMinimize.ForeColor = System.Drawing.Color.White;
             this.buttonMinimize.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.buttonMinimize.IconColor = System.Drawing.Color.White;
+            this.buttonMinimize.IconColor = System.Drawing.Color.Brown;
             this.buttonMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.buttonMinimize.IconSize = 35;
             this.buttonMinimize.Location = new System.Drawing.Point(0, 0);
@@ -175,14 +180,14 @@ namespace Management_Hotel.View
             // 
             // iconButton1
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.iconButton1.Dock = System.Windows.Forms.DockStyle.Right;
             this.iconButton1.FlatAppearance.BorderSize = 0;
             this.iconButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton1.ForeColor = System.Drawing.Color.White;
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.WindowRestore;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconColor = System.Drawing.Color.Brown;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 35;
             this.iconButton1.Location = new System.Drawing.Point(48, 0);
@@ -193,14 +198,14 @@ namespace Management_Hotel.View
             // 
             // buttonClose
             // 
-            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonClose.Dock = System.Windows.Forms.DockStyle.Right;
             this.buttonClose.FlatAppearance.BorderSize = 0;
             this.buttonClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClose.ForeColor = System.Drawing.Color.White;
             this.buttonClose.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
-            this.buttonClose.IconColor = System.Drawing.Color.White;
+            this.buttonClose.IconColor = System.Drawing.Color.Brown;
             this.buttonClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.buttonClose.IconSize = 35;
             this.buttonClose.Location = new System.Drawing.Point(92, 0);
@@ -208,11 +213,10 @@ namespace Management_Hotel.View
             this.buttonClose.Size = new System.Drawing.Size(44, 43);
             this.buttonClose.TabIndex = 5;
             this.buttonClose.UseVisualStyleBackColor = false;
-            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.panel3.Controls.Add(this.pictureBoxLogo);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
@@ -224,10 +228,10 @@ namespace Management_Hotel.View
             // 
             this.pictureBoxLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.pictureBoxLogo.ForeColor = System.Drawing.Color.Silver;
+            this.pictureBoxLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.pictureBoxLogo.ForeColor = System.Drawing.Color.Brown;
             this.pictureBoxLogo.IconChar = FontAwesome.Sharp.IconChar.Hotel;
-            this.pictureBoxLogo.IconColor = System.Drawing.Color.Silver;
+            this.pictureBoxLogo.IconColor = System.Drawing.Color.Brown;
             this.pictureBoxLogo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.pictureBoxLogo.IconSize = 65;
             this.pictureBoxLogo.Location = new System.Drawing.Point(53, 21);
@@ -235,21 +239,10 @@ namespace Management_Hotel.View
             this.pictureBoxLogo.Size = new System.Drawing.Size(67, 65);
             this.pictureBoxLogo.TabIndex = 0;
             this.pictureBoxLogo.TabStop = false;
-            this.pictureBoxLogo.MouseLeave += new System.EventHandler(this.pictureBoxLogo_MouseLeave);
-            this.pictureBoxLogo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBoxLogo_MouseMove);
-            // 
-            // panelShow
-            // 
-            this.panelShow.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelShow.Location = new System.Drawing.Point(0, 100);
-            this.panelShow.Name = "panelShow";
-            this.panelShow.Size = new System.Drawing.Size(1380, 680);
-            this.panelShow.TabIndex = 1;
             // 
             // timer1
             // 
             this.timer1.Interval = 10;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FormClient
             // 
@@ -276,20 +269,20 @@ namespace Management_Hotel.View
 
         #endregion
 
+        private System.Windows.Forms.Panel panelShow;
         private System.Windows.Forms.Panel panelTop;
-        private System.Windows.Forms.Panel panel3;
-        private FontAwesome.Sharp.IconPictureBox pictureBoxLogo;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
-        private FontAwesome.Sharp.IconButton buttonClose;
-        private FontAwesome.Sharp.IconButton buttonMinimize;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.Label labelMess;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton buttonLogout;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.PictureBox picAvatar;
-        private System.Windows.Forms.Panel panelShow;
-        private System.Windows.Forms.Label labelMess;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private FontAwesome.Sharp.IconButton buttonMinimize;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton buttonClose;
+        private System.Windows.Forms.Panel panel3;
+        private FontAwesome.Sharp.IconPictureBox pictureBoxLogo;
         private System.Windows.Forms.Timer timer1;
     }
 }

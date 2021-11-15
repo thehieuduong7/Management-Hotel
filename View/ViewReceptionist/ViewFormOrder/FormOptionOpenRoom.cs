@@ -1,4 +1,4 @@
-﻿using Management_Hotel.Control.ControlReceptionist;
+﻿using Management_Hotel.Control_DAO;
 using Management_Hotel.Model;
 using Management_Hotel.View.ViewReceptionist.ViewFormOrderFood;
 using System;
@@ -15,13 +15,21 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
 {
     public partial class FormOptionOpenRoom : Form
     {
-        CtrOrderRoom ctrOrder;
-        public OrderRoom order { get; set; }
+        int id_datPhong;
+        public void fillData(int id_room)
+        {
+            DataTable data = DatPhongDAO.DatPhong_getMaDatAvaiByIDPhong_func(id_room);
+            if (data.Rows.Count== 0)
+            {
+                return;
+            }
+            int id_datPhong = int.Parse(data.Rows[0][0].ToString());
+            this.id_datPhong = id_datPhong;
+        }
         public FormOrderRoom formParent { get; set; }
         public FormOptionOpenRoom()
         {
             InitializeComponent();
-            this.ctrOrder = new CtrOrderRoom();
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
@@ -41,49 +49,25 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
         private void buttonOrderFood_Click(object sender, EventArgs e)
         {
             FormOrderFood form = new FormOrderFood();
-            form.id_order = this.order.id_order;
-            if (form.ShowDialog() == DialogResult.No)
+            form.id_datPhong = this.id_datPhong;
+            if (form.ShowDialog() == DialogResult.OK)
             {
-                return;
+                this.formParent.init();
             }
-            this.formParent.reset();
-
         }
 
         private void buttonSwapRoom_Click(object sender, EventArgs e)
         {
-            FormSelectRoom form = new FormSelectRoom();
-            if (form.ShowDialog() == DialogResult.No)
+            FormSwapRoom form = new FormSwapRoom();
+            if (form.ShowDialog() == DialogResult.OK)
             {
-                return;
-            }
-            Room room = FormSelectRoom.get_select_room();
-            this.order.id_room = room.id_phong;
-            if (ctrOrder.updatetRoom(this.order))
-            {
-                MessageBox.Show("Success", "Management Hotel",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.formParent.reset();
-            }
-            else
-            {
-                MessageBox.Show("Fail", "Management Hotel",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+               
             }
         }
 
         private void buttonPayRoom_Click(object sender, EventArgs e)
         {
-            FormPayRoom form = new FormPayRoom();
-            form.setId_Order(this.order.id_order);
-            if(form.ShowDialog() == DialogResult.No)
-            {
-                return;
-            }
-            else
-            {
-                this.formParent.reset();
-            }
+            
         }
     }
 }

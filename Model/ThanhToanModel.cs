@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Management_Hotel.Model
 {
-    class ThanhToanModel
+    public class ThanhToanModel
     {
         int id_thanhToan { get; set; }
         int id_datPhong { get; set; }

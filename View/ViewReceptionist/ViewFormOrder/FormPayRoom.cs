@@ -1,4 +1,4 @@
-﻿using Management_Hotel.Control.ControlReceptionist;
+﻿using Management_Hotel.Control_DAO;
 using Management_Hotel.Model;
 using System;
 using System.Collections.Generic;
@@ -14,115 +14,55 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
 {
     public partial class FormPayRoom : Form
     {
-        CtrOrderFood ctrOrderFood;
-        CtrOrderRoom ctrOrderRoom;
-        CtrCRUDRoom ctrRoom;
-        CtrCRUDGuest ctrGuest;
-        Room room;
-        OrderRoom order;
-        Guest guest;
-        private string id_order;
-        private float moneyTotalFood;
-        private float moneyTotalRoom;
-
         public FormPayRoom()
         {
             InitializeComponent();
-            this.ctrOrderFood = new CtrOrderFood();
-            ctrOrderRoom = new CtrOrderRoom();
-            ctrRoom = new CtrCRUDRoom();
-            ctrGuest = new CtrCRUDGuest();
         }
-        public void setId_Order(string id_order)
+        int id_datPhong;
+        public void fillData(int id_datPhong)
         {
-            this.id_order = id_order;
-            dataGrid_load();
-            Information_load();
-            this.labelMoneyPay.Text = (this.moneyTotalFood + this.moneyTotalRoom).ToString()+"d";
+            this.id_datPhong = id_datPhong;
+            DataTable data_datPhong = DatPhongDAO.DatPhong_search_func(id_datPhong);
+            //elect MaDat,ID_KH,TenKhachHang,ID_Phong," +
+            // "TenPhong,GiaPhong,ID_NV,TenNVDat, NgayDat, TrangThai
+            if (data_datPhong.Rows.Count == 0) return;
+            String id_kh =data_datPhong.Rows[0][1].ToString().Trim();
+            string name_kh = data_datPhong.Rows[0][2].ToString().Trim();
+            String tenPhong = data_datPhong.Rows[0][4].ToString().Trim();
+            String gia = data_datPhong.Rows[0][5].ToString().Trim();
+            string trangThai = data_datPhong.Rows[0][9].ToString().Trim();
+
+            this.label_id_guest.Text = id_kh;
+            this.label_nameGuest.Text = name_kh;
+            this.labeltenRoom.Text = tenPhong;
+            this.labelPrice.Text = gia;
+            this.labelTrangThai.Text = trangThai;
+
+            DataTable data_totalMoney = DatPhongDAO.DatPhong_TongTienDatPhong_func(id_datPhong);
+            if (data_totalMoney.Rows.Count == 0) return;
+            string total_money = data_totalMoney.Rows[0][0].ToString();
+            this.label_TotalmoneyRoom.Text = total_money;
+
+            fillDataOrder(id_datPhong) ;
+
+            DataTable data_moneyPAy = ThanhToanDAO.ThanhToan_TongTienPhong_func(id_datPhong);
+            if (data_moneyPAy.Rows.Count == 0) return;
+            string total_money_pay = data_moneyPAy.Rows[0][0].ToString();
+            this.labelMoneyPay.Text = total_money_pay;
+
         }
-        public void dataGrid_load()
+        public void fillDataOrder(int id_datPhong)
         {
-            this.dataGridViewFood.DataSource = ctrOrderFood.getOrderById(id_order);
+
+            DataTable data_order = DatMonDAO.DatMon_listDaDat_func(this.id_datPhong);
+            //ID_DatMon,ID_Mon,TenMon,GiaBan,SoLuong,TongTien,ThoiGianDat            this.dataGridViewGuest.DataSource = data;
             this.dataGridViewFood.AllowUserToAddRows = false;
-            this.dataGridViewFood.RowTemplate.Height = 30;
-            int[] colWidth = { 100, 80, 120, 80,160,120};
-            string[] colName = { "ID food","Picture food","Name food","Amount","Day","Price" };
-            for (int i = 0; i < colName.Length; i++)
-            {
-                this.dataGridViewFood.Columns[i].HeaderText = colName[i];
-                this.dataGridViewFood.Columns[i].Width = colWidth[i];
-            }
+            this.dataGridViewFood.RowTemplate.Height = 100;
+            int[] colWidth = { 60,60,160,100,60,160,160 };
+            string[] colName = { "ID_DatMon", "ID_Mon", "TenMon", "GiaBan", "SoLuong", "TongTien", "ThoiGianDat" };
+
             this.dataGridViewFood.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewFood.ReadOnly = true;
-
-            //total
-            this.moneyTotalFood=0;
-            foreach(DataRow row in (dataGridViewFood.DataSource as DataTable).Rows)
-            {
-                moneyTotalFood = moneyTotalFood + 
-                    float.Parse(row["price"].ToString())*int.Parse(row["amount"].ToString());
-            }
-            this.labelMoneyFood.Text = moneyTotalFood.ToString() + "d";
-        }
-        private void Information_load()
-        {
-            this.order = ctrOrderRoom.getOrderByIDOrder(id_order);
-            this.room = ctrRoom.getRoomById(order.id_room);
-            this.guest = ctrGuest.getGuestByID(order.id_guest);
-            this.pictureGuest.Image = guest.picture;
-            this.label_id_guest.Text = guest.id_guest.ToString();
-            this.label_nameGuest.Text = guest.full_name;
-            this.labelIDRoom.Text = room.id_phong;
-            this.labelPrice.Text = room.giaPhong.ToString() + "d";
-            this.label_Daystart.Text = order.day_order.ToString("MM/dd/yyyy hh:mm:ss");
-            this.label_dayEnd.Text = DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss");
-            TimeSpan time_total = DateTime.Now.Subtract(order.day_order);
-            this.label_dayTotal.Text = time_total.ToString(@"dd\:hh\:mm\:ss");
-            this.moneyTotalRoom = room.giaPhong * (time_total.Days+1);
-            this.label_moneyRoom.Text = moneyTotalRoom.ToString()+"d";
-        }
-        private void buttonCancel_Click(object sender, EventArgs e)
-        {
-            this.DialogResult = DialogResult.No;
-            this.Close();
-        }
-        private void dataGridViewFood_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            if (e.RowIndex != -1)
-            {
-                this.dataGridViewFood.ClearSelection();
-                this.dataGridViewFood.Rows[e.RowIndex].Selected = true;
-            }
-        }
-
-        private void dataGridViewFood_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex != -1)
-            {
-                this.dataGridViewFood.ClearSelection();
-                this.dataGridViewFood.Rows[e.RowIndex].Selected = false;
-            }
-        }
-
-        private void buttonPay_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show
-   ("Do you want to pay?", "Management Hotel",
-   MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No) return;
-            if(this.ctrOrderRoom.closeRoom(order.id_order))
-            {
-                MessageBox.Show
-   ("Success!", "Management Hotel",
-   MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.DialogResult = DialogResult.Yes;
-                this.Close();
-            }
-            else{
-                MessageBox.Show
-   ("Fail!", "Management Hotel",
-   MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            
         }
     }
 }

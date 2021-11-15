@@ -1,5 +1,4 @@
 ﻿using Management_Hotel.Control;
-using Management_Hotel.Control.ControlManager;
 using Management_Hotel.Model;
 using System;
 using System.Collections.Generic;
@@ -41,6 +40,18 @@ namespace Management_Hotel.View
         private void buttonExit_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+        public bool isFull()
+        {
+            if(this.textBoxUser.Text!="" && this.textBoxPass.Text != "")
+            {
+                return true;
+            }
+            return false;
+        }
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

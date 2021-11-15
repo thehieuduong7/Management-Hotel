@@ -1,4 +1,4 @@
-﻿using Management_Hotel.Control.ControlReceptionist;
+﻿using Management_Hotel.Control_DAO;
 using Management_Hotel.Model;
 using System;
 using System.Collections.Generic;
@@ -17,7 +17,6 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormFood
         public FormAddFood()
         {
             InitializeComponent();
-            this.ctrFood = new CtrCRUDFood();
             form_load();
         }
         private void form_load()
@@ -25,7 +24,6 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormFood
             this.numericAmount.Minimum = 0;
             this.numericAmount.Maximum = 1000;
         }
-        CtrCRUDFood ctrFood;
         private void buttonUpload_Click(object sender, EventArgs e)
         {
             openFileDialog1.Title = "Upload image";
@@ -61,18 +59,19 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormFood
                 return;
             try
             {
-                string id_food = this.textBoxID.Text.Trim();
+
                 Image picture = this.pictureFood.Image;
                 string name_food = this.textBoxName.Text.Trim();
                 int amount =(int) this.numericAmount.Value;
+                float realprice = float.Parse(this.textBoxRealPrice.Text);
                 float price = float.Parse(this.textBoxPrice.Text);
-                Food food = new Food(id_food, picture, name_food, amount, price);
-                if (ctrFood.insertFood(food))
+
+                if (KhoDAO.Kho_add_proc(name_food,amount,realprice,price,picture,null) )  
                 {
                     MessageBox.Show
                         ("Success!", "Management Hotel", 
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.DialogResult = DialogResult.Yes;
+                    this.DialogResult = DialogResult.OK;
                     this.Close();
                 }
                 else
@@ -87,6 +86,12 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormFood
                        "Management Hotel", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.No;
+            this.Close();
         }
     }
 }

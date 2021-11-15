@@ -16,21 +16,14 @@ namespace Management_Hotel.View.ViewReceptionist.CtrUser
         {
             InitializeComponent();
         }
-        FormCRUDRoom formParent;
-        public void setParent(FormCRUDRoom formParent)
-        {
-            this.formParent = formParent;
-        }
+        public FormCRUDRoom formParent { get; set; }
         private void pictureAdd_Click(object sender, EventArgs e)
         {
-            FormAddRoom formAdd = new FormAddRoom();
-            if (this.formParent != null)
+            FormAddRoom form = new FormAddRoom();
+            if (form.ShowDialog() == DialogResult.OK)
             {
-                formAdd.setParent(this.formParent);
-            }
-            if (formAdd.ShowDialog() == DialogResult.Yes)
-            {
-                this.formParent.reset();
+                if (formParent != null)
+                    formParent.init();
             }
         }
     }

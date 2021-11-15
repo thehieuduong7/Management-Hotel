@@ -34,7 +34,7 @@ namespace Management_Hotel.View.ViewReceptionist.CtrUser
             // 
             // buttonAdd
             // 
-            this.buttonAdd.BackColor = System.Drawing.Color.Silver;
+            this.buttonAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonAdd.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonAdd.FlatAppearance.BorderSize = 0;
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -45,19 +45,20 @@ namespace Management_Hotel.View.ViewReceptionist.CtrUser
             this.buttonAdd.IconSize = 50;
             this.buttonAdd.Location = new System.Drawing.Point(0, 0);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(150, 150);
+            this.buttonAdd.Size = new System.Drawing.Size(135, 175);
             this.buttonAdd.TabIndex = 1;
             this.buttonAdd.Text = "Add Food";
             this.buttonAdd.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonAdd.UseVisualStyleBackColor = false;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
-            // ControlAddFoodcs
+            // ControlAddFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.buttonAdd);
-            this.Name = "ControlAddFoodcs";
+            this.Name = "ControlAddFood";
+            this.Size = new System.Drawing.Size(135, 175);
             this.ResumeLayout(false);
 
         }

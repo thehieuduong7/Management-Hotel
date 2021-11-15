@@ -1,4 +1,5 @@
-﻿using Management_Hotel.Model;
+﻿using Management_Hotel.Control_DAO;
+using Management_Hotel.Model;
 using Management_Hotel.View.ViewReceptionist.ViewFormFood;
 using Management_Hotel.View.ViewReceptionist.ViewFormOrder;
 using System;
@@ -15,30 +16,41 @@ namespace Management_Hotel.View.ViewReceptionist.CtrUser
 {
     public partial class ControlCRUDFood : UserControl
     {
-        private Food food;
+        private int id_food;
         public FormCRUDFood formParent { get; set; }
         public ControlCRUDFood()
         {
             InitializeComponent();
         }
-        public void setFood(Food food)
+        public void fillData(int id_food)
         {
-            this.food = food;
-            this.buttonEdit.Image = food.picture;
-            this.buttonEdit.Text = food.price.ToString()+"d";
-            this.labelName.Text = string.Format("Name: {0}\nAmount:{1}", food.name_food, food.amount);
-            
+            this.id_food = id_food;
+            DataTable data = KhoDAO.Kho_searchByID_func(id_food);
+
+            if (data.Rows.Count == 0) return;
+
+            string tenMon = data.Rows[0][1].ToString().Trim();
+            string soLuong = data.Rows[0][2].ToString().Trim();
+            string giaBan = data.Rows[0][4].ToString().Trim();
+            Image img = GlobalUser.CvtToImg((byte[])data.Rows[0][5]);
+
+            if (img != null)
+                this.pictureFood.Image = img;
+            this.buttonMoney.Text = giaBan + "d";
+            this.labelName.Text = string.Format("Name: {0}\nAmount:{1}", tenMon, soLuong);
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
             FormEditFood form = new FormEditFood();
-            form.fillData(this.food);
-            if(form.ShowDialog()==DialogResult.No) return;
-            if (formParent != null)
+            form.fillData(this.id_food) ;
+            if (form.ShowDialog() == DialogResult.OK)
             {
-                formParent.reset();
+                formParent.init();
+                this.Dispose();
             }
         }
+
+
     }
 }

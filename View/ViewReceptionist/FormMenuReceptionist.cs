@@ -1,5 +1,5 @@
 ﻿using Management_Hotel.Model;
-using Management_Hotel.View.ViewLabourer;
+using Management_Hotel.View.ViewReceptionist.ViewFormNhapKho;
 using Management_Hotel.View.ViewReceptionist.ViewFormOrder;
 using System;
 using System.Collections.Generic;
@@ -20,7 +20,6 @@ namespace Management_Hotel.View.ViewReceptionist
         {
             InitializeComponent();
         }
-        public NhanVienModel employee { get; set; }
         private void resetColorButtonOption()
         {
             foreach (Object btn in this.panelOption.Controls)
@@ -33,14 +32,17 @@ namespace Management_Hotel.View.ViewReceptionist
                 catch (InvalidCastException) { continue; }
                 if (button != null)
                 {
-                    button.BackColor = Color.FromArgb(33, 33, 33);
+                    button.BackColor = Color.FromArgb(255, 224, 192);
+                    button.ForeColor = Color.FromArgb(255, 128, 128);
+
                 }
             }
         }
         private void selectButtonOption(Button btn)
         {
             resetColorButtonOption();
-            btn.BackColor = Color.DimGray;
+            btn.BackColor = Color.FromArgb(255, 128, 128);
+            btn.ForeColor = Color.FromArgb(255, 224, 192);
         }
         private void openChildForm(Form form)
         {
@@ -56,8 +58,6 @@ namespace Management_Hotel.View.ViewReceptionist
             FormCRUDRoom form = new FormCRUDRoom();
             openChildForm(form);
         }
-
-        
 
         private void buttonGuest_Click(object sender, EventArgs e)
         {
@@ -80,9 +80,11 @@ namespace Management_Hotel.View.ViewReceptionist
             openChildForm(form);
         }
 
-        private void btnNhapKho_Click(object sender, EventArgs e)
+        private void buttonNhapKho_Click(object sender, EventArgs e)
         {
-
+            selectButtonOption(this.buttonNhapKho);
+            FormNhapkho form = new FormNhapkho();
+            openChildForm(form);
         }
     }
 }

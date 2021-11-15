@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Management_Hotel.Model
 {
-    class PhongModel
+    public class PhongModel
     {
         public int id_phong { get; set; }
         public String tenPhong { get; set; }

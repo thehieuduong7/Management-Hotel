@@ -38,14 +38,14 @@ namespace Management_Hotel.View.ViewReceptionist.CtrUser
             // 
             // buttonEdit
             // 
-            this.buttonEdit.BackColor = System.Drawing.Color.LightGray;
+            this.buttonEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.buttonEdit.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.buttonEdit.FlatAppearance.BorderSize = 0;
             this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEdit.Font = new System.Drawing.Font("MV Boli", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEdit.ForeColor = System.Drawing.Color.Black;
-            this.buttonEdit.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            this.buttonEdit.IconColor = System.Drawing.Color.Black;
+            this.buttonEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonEdit.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.buttonEdit.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.buttonEdit.IconSize = 35;
             this.buttonEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -54,12 +54,13 @@ namespace Management_Hotel.View.ViewReceptionist.CtrUser
             this.buttonEdit.Size = new System.Drawing.Size(148, 33);
             this.buttonEdit.TabIndex = 1;
             this.buttonEdit.Text = "Money";
+            this.buttonEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonEdit.UseVisualStyleBackColor = false;
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // buttonRemove
             // 
-            this.buttonRemove.BackColor = System.Drawing.Color.LightGray;
+            this.buttonRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.buttonRemove.FlatAppearance.BorderSize = 0;
             this.buttonRemove.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.buttonRemove.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
@@ -68,7 +69,7 @@ namespace Management_Hotel.View.ViewReceptionist.CtrUser
             this.buttonRemove.IconChar = FontAwesome.Sharp.IconChar.None;
             this.buttonRemove.IconColor = System.Drawing.Color.Black;
             this.buttonRemove.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.buttonRemove.Location = new System.Drawing.Point(119, 3);
+            this.buttonRemove.Location = new System.Drawing.Point(121, -1);
             this.buttonRemove.Name = "buttonRemove";
             this.buttonRemove.Size = new System.Drawing.Size(28, 21);
             this.buttonRemove.TabIndex = 2;
@@ -88,14 +89,15 @@ namespace Management_Hotel.View.ViewReceptionist.CtrUser
             this.label_room.Size = new System.Drawing.Size(52, 17);
             this.label_room.TabIndex = 4;
             this.label_room.Text = "Room";
+            this.label_room.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // pictureLogo
             // 
-            this.pictureLogo.BackColor = System.Drawing.Color.LightGray;
+            this.pictureLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.pictureLogo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureLogo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.pictureLogo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pictureLogo.IconChar = FontAwesome.Sharp.IconChar.DoorClosed;
-            this.pictureLogo.IconColor = System.Drawing.SystemColors.ControlText;
+            this.pictureLogo.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pictureLogo.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.pictureLogo.IconSize = 148;
             this.pictureLogo.Location = new System.Drawing.Point(0, 0);

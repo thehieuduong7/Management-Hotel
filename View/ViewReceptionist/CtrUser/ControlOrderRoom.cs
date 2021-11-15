@@ -1,4 +1,4 @@
-﻿using Management_Hotel.Control.ControlReceptionist;
+﻿using Management_Hotel.Control_DAO;
 using Management_Hotel.Model;
 using Management_Hotel.View.ViewReceptionist.ViewFormOrder;
 using System;
@@ -18,20 +18,19 @@ namespace Management_Hotel.View.ViewReceptionist.CtrUser
         public ControlOrderRoom()
         {
             InitializeComponent();
-            this.ctrRoom = new CtrCRUDRoom();
-            this.ctrOrder = new CtrOrderRoom();
         }
-        public Room room { get; set; }
-        private string status;
-        CtrCRUDRoom ctrRoom;
-        CtrOrderRoom ctrOrder;
-        public FormOrderRoom formParent;
-        public void setRoom (Room room)
+        private int id_room;
+        private string status = "Dang Su Dung";
+        public void fillData(int id_room)
         {
-            this.room = room;
-            this.buttonOrder.Text = room.id_phong;
-            this.status = ctrRoom.get_state_room(room.id_phong);
-            if (this.status == "Open")
+            //ID_Phong,TenPhong,Vitri,Photo,Gia,TrangThai
+            DataTable data = PhongDAO.Phong_searchByID_func(id_room);
+            if (data.Rows.Count == 0) return;
+            string tenPhong = data.Rows[0][1].ToString().Trim();
+            String trangThai = data.Rows[0][5].ToString().Trim();
+            this.status = trangThai;
+            this.buttonOrder.Text = tenPhong;
+            if (status=="Dang Su Dung")
             {
                 open_load();
             }
@@ -40,6 +39,9 @@ namespace Management_Hotel.View.ViewReceptionist.CtrUser
                 closed_load();
             }
         }
+
+        public FormOrderRoom formParent;
+
         public void open_load()
         {
             this.buttonOrder.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
@@ -53,27 +55,26 @@ namespace Management_Hotel.View.ViewReceptionist.CtrUser
         public void open_click()
         {
             FormOptionOpenRoom form = new FormOptionOpenRoom();
-            form.order = this.ctrOrder.getOrderByIdRoom(room.id_phong);
+            form.fillData(this.id_room);
             form.formParent = this.formParent;
             form.ShowDialog();
         }
-        public void close_click()
+        public void closed_click()
         {
             FormOptionCloseRoom form = new FormOptionCloseRoom();
-            form.room = this.room;
+            form.fillData(this.id_room);
             form.formParent = this.formParent;
             form.ShowDialog();
-            form.formParent.reset();
         }
         private void buttonOrder_Click(object sender, EventArgs e)
         {
-            if (this.status == "Open")
+            if(this.status=="Dang Su Dung")
             {
                 open_click();
             }
             else
             {
-                close_click();
+                closed_click();
             }
         }
     }

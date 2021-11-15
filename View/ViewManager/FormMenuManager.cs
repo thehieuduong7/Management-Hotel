@@ -1,4 +1,5 @@
-﻿using Management_Hotel.View.ViewReceptionist;
+﻿using Management_Hotel.View.ViewManager.ViewFormAccount;
+using Management_Hotel.View.ViewReceptionist;
 using Management_Hotel.View.ViewReceptionist.ViewFormOrder;
 using System;
 using System.Collections.Generic;
@@ -17,18 +18,18 @@ namespace Management_Hotel.View.ViewManager
         public FormMenuManager()
         {
             InitializeComponent();
-            this.formEdit = new FormEditEmployee();
-            this.formDivision = new FormDivisionEmployee();
-            this.formReport = new FormReportEmployee();
         }
         private void FormMenuManager_Load(object sender, EventArgs e)
         {
         }
 
-
-        FormEditEmployee formEdit;
-        FormDivisionEmployee formDivision;
-        FormReportEmployee formReport;
+        DataTable format(DataTable data)
+        {
+            foreach(DataRow row in data.Rows)
+            {
+            }
+            return null;
+        }
         private void openChildForm(Form form)
         {
             this.panelShow.Controls.Clear();
@@ -38,11 +39,7 @@ namespace Management_Hotel.View.ViewManager
             form.Visible = true;
         }
 
-        private void buttonScheduleOption_Click(object sender, EventArgs e)
-        {
-            selectButtonOption(this.buttonScheduleOption);
-            openChildForm(this.formDivision);
-        }
+  
         private void buttonInformation_MouseMove(object sender, MouseEventArgs e)
         {
             Button btn = (Button)sender;
@@ -68,26 +65,26 @@ namespace Management_Hotel.View.ViewManager
                 catch (InvalidCastException) { continue; }
                 if (button != null)
                 {
-                    button.BackColor = Color.FromArgb(33,33,33) ;
+                    button.BackColor = Color.FromArgb(255, 192, 192);
+                    button.ForeColor = Color.Brown;
                 }
             }
         }
         private void selectButtonOption(Button btn)
         {
             resetColorButtonOption();
-            btn.BackColor = Color.DimGray;
+            btn.BackColor = Color.FromArgb(255, 128, 128);
+            btn.ForeColor = Color.FromArgb(255, 224, 192);
         }
 
         private void buttonReportOption_Click(object sender, EventArgs e)
         {
             selectButtonOption(this.buttonReportOption);
-            openChildForm(this.formReport);
         }
 
         private void buttonEmployeeOption_Click(object sender, EventArgs e)
         {
             selectButtonOption(this.buttonEmployeeOption);
-            openChildForm(formEdit);
         }
 
         private void buttonRoom_Click(object sender, EventArgs e)
@@ -116,6 +113,25 @@ namespace Management_Hotel.View.ViewManager
             selectButtonOption(this.buttonOrderRoom);
             FormOrderRoom form = new FormOrderRoom();
             openChildForm(form);
+        }
+
+        private void buttonEmployeeOption_Click_1(object sender, EventArgs e)
+        {
+            selectButtonOption(this.buttonEmployeeOption);
+            FormCRUDEmployee form = new FormCRUDEmployee();
+            openChildForm(form);
+        }
+
+        private void buttonAccount_Click(object sender, EventArgs e)
+        {
+            selectButtonOption(this.buttonAccount);
+            FormCRUDAccount form = new FormCRUDAccount();
+            openChildForm(form);
+        }
+
+        private void buttonReportOption_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
