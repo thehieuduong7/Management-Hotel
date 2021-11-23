@@ -1,6 +1,7 @@
 ﻿using Management_Hotel.View.ViewAdmin.ViewFormReport;
 using Management_Hotel.View.ViewManager.ViewFormAccount;
 using Management_Hotel.View.ViewReceptionist;
+using Management_Hotel.View.ViewReceptionist.ViewFormNhapKho;
 using Management_Hotel.View.ViewReceptionist.ViewFormOrder;
 using System;
 using System.Collections.Generic;
@@ -114,6 +115,13 @@ namespace Management_Hotel.View.ViewManager
         {
             selectButtonOption(this.buttonReportOption);
             Form form = new FormReport();
+            openChildForm(form);
+        }
+
+        private void buttonNhapKho_Click(object sender, EventArgs e)
+        {
+            selectButtonOption(this.buttonNhapKho);
+            FormNhapkho form = new FormNhapkho();
             openChildForm(form);
         }
     }

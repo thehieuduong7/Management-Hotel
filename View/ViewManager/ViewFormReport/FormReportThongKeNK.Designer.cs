@@ -42,13 +42,13 @@ namespace Management_Hotel.View.ViewManager.ViewFormReport
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(96, 39);
+            this.chart1.Location = new System.Drawing.Point(98, 34);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(1006, 363);
+            this.chart1.Size = new System.Drawing.Size(833, 363);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
@@ -57,7 +57,7 @@ namespace Management_Hotel.View.ViewManager.ViewFormReport
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1200, 450);
+            this.ClientSize = new System.Drawing.Size(1030, 450);
             this.Controls.Add(this.chart1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormReportThongKeNK";

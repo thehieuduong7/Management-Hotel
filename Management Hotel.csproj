@@ -479,5 +479,12 @@
     <Folder Include="ImageView\" />
     <Folder Include="Image\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerSetup\CreateFunction.sql" />
+    <Content Include="SqlServerSetup\CreateProcedure.sql" />
+    <Content Include="SqlServerSetup\CreateTable and Constraint.sql" />
+    <Content Include="SqlServerSetup\CreateTrigger and Transaction.sql" />
+    <Content Include="SqlServerSetup\CreateView.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

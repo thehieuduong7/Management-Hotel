@@ -55,7 +55,7 @@ namespace Management_Hotel.View.ViewAdmin.ViewFormReport
             this.Panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel11.Location = new System.Drawing.Point(0, 0);
             this.Panel11.Name = "Panel11";
-            this.Panel11.Size = new System.Drawing.Size(1380, 680);
+            this.Panel11.Size = new System.Drawing.Size(1150, 680);
             this.Panel11.TabIndex = 8;
             // 
             // panel3
@@ -109,7 +109,7 @@ namespace Management_Hotel.View.ViewAdmin.ViewFormReport
             this.panelShow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelShow.Location = new System.Drawing.Point(100, 188);
             this.panelShow.Name = "panelShow";
-            this.panelShow.Size = new System.Drawing.Size(1141, 445);
+            this.panelShow.Size = new System.Drawing.Size(1030, 445);
             this.panelShow.TabIndex = 6;
             // 
             // panel1
@@ -120,7 +120,7 @@ namespace Management_Hotel.View.ViewAdmin.ViewFormReport
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1380, 140);
+            this.panel1.Size = new System.Drawing.Size(1150, 140);
             this.panel1.TabIndex = 5;
             // 
             // label1
@@ -154,7 +154,7 @@ namespace Management_Hotel.View.ViewAdmin.ViewFormReport
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1380, 680);
+            this.ClientSize = new System.Drawing.Size(1150, 680);
             this.Controls.Add(this.Panel11);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormReport";
