@@ -62,6 +62,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -79,6 +80,7 @@
     <Compile Include="Control DAO\ConnectionController.cs" />
     <Compile Include="Control DAO\DatMonDAO.cs" />
     <Compile Include="Control DAO\DatPhongDAO.cs" />
+    <Compile Include="Control DAO\PhanQuyenDAO.cs" />
     <Compile Include="GlobalUser.cs" />
     <Compile Include="Control DAO\KhachHangDAO.cs" />
     <Compile Include="Control DAO\KhoDAO.cs" />
@@ -101,23 +103,53 @@
     <Compile Include="View\FormClient.Designer.cs">
       <DependentUpon>FormClient.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\ViewManager\ViewFormAccount\FormAddAccount.cs">
+    <Compile Include="View\ViewAdmin\FormMenuAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\ViewManager\ViewFormAccount\FormAddAccount.Designer.cs">
+    <Compile Include="View\ViewAdmin\FormMenuAdmin.Designer.cs">
+      <DependentUpon>FormMenuAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewAdmin\ViewFormAccount\FormAddAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewAdmin\ViewFormAccount\FormAddAccount.Designer.cs">
       <DependentUpon>FormAddAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\ViewManager\ViewFormAccount\FormCRUDAccount.cs">
+    <Compile Include="View\ViewAdmin\ViewFormAccount\FormCRUDAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\ViewManager\ViewFormAccount\FormCRUDAccount.Designer.cs">
+    <Compile Include="View\ViewAdmin\ViewFormAccount\FormCRUDAccount.Designer.cs">
       <DependentUpon>FormCRUDAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\ViewManager\ViewFormAccount\FormEditAccount.cs">
+    <Compile Include="View\ViewAdmin\ViewFormAccount\FormEditAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\ViewManager\ViewFormAccount\FormEditAccount.Designer.cs">
+    <Compile Include="View\ViewAdmin\ViewFormAccount\FormEditAccount.Designer.cs">
       <DependentUpon>FormEditAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewManager\ViewFormReport\FormReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewManager\ViewFormReport\FormReport.Designer.cs">
+      <DependentUpon>FormReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewManager\ViewFormReport\FormReportNhapKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewManager\ViewFormReport\FormReportNhapKho.Designer.cs">
+      <DependentUpon>FormReportNhapKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewManager\ViewFormReport\FormReportThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewManager\ViewFormReport\FormReportThanhToan.Designer.cs">
+      <DependentUpon>FormReportThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewManager\ViewFormReport\FormReportThongKeNK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewManager\ViewFormReport\FormReportThongKeNK.Designer.cs">
+      <DependentUpon>FormReportThongKeNK.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ViewManager\ViewFromNhanVien\FormAddEmpl.cs">
       <SubType>Form</SubType>
@@ -162,6 +194,12 @@
     </Compile>
     <Compile Include="View\ViewReceptionist\CtrUser\ControlAddRoom.Designer.cs">
       <DependentUpon>ControlAddRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\CtrUser\ControlClickFood.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ViewReceptionist\CtrUser\ControlClickFood.Designer.cs">
+      <DependentUpon>ControlClickFood.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ViewReceptionist\CtrUser\ControlCRUDFood.cs">
       <SubType>UserControl</SubType>
@@ -298,14 +336,29 @@
     <EmbeddedResource Include="View\FormClient.resx">
       <DependentUpon>FormClient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\ViewManager\ViewFormAccount\FormAddAccount.resx">
+    <EmbeddedResource Include="View\ViewAdmin\FormMenuAdmin.resx">
+      <DependentUpon>FormMenuAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewAdmin\ViewFormAccount\FormAddAccount.resx">
       <DependentUpon>FormAddAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\ViewManager\ViewFormAccount\FormCRUDAccount.resx">
+    <EmbeddedResource Include="View\ViewAdmin\ViewFormAccount\FormCRUDAccount.resx">
       <DependentUpon>FormCRUDAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\ViewManager\ViewFormAccount\FormEditAccount.resx">
+    <EmbeddedResource Include="View\ViewAdmin\ViewFormAccount\FormEditAccount.resx">
       <DependentUpon>FormEditAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewManager\ViewFormReport\FormReport.resx">
+      <DependentUpon>FormReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewManager\ViewFormReport\FormReportNhapKho.resx">
+      <DependentUpon>FormReportNhapKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewManager\ViewFormReport\FormReportThanhToan.resx">
+      <DependentUpon>FormReportThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewManager\ViewFormReport\FormReportThongKeNK.resx">
+      <DependentUpon>FormReportThongKeNK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ViewManager\ViewFromNhanVien\FormAddEmpl.resx">
       <DependentUpon>FormAddEmpl.cs</DependentUpon>
@@ -338,6 +391,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ViewReceptionist\CtrUser\ControlAddRoom.resx">
       <DependentUpon>ControlAddRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewReceptionist\CtrUser\ControlClickFood.resx">
+      <DependentUpon>ControlClickFood.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ViewReceptionist\CtrUser\ControlCRUDFood.resx">
       <DependentUpon>ControlCRUDFood.cs</DependentUpon>
@@ -418,9 +474,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="code hotel.sql" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ImageView\" />

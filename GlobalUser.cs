@@ -11,7 +11,13 @@ namespace Management_Hotel.Control_DAO
 {
     class GlobalUser
     {
-        public static NhanVienModel nhanVien { get; set; }
+        public static int idNhanVien { get; set; }
+        public static string ChucVu { get; set; }
+        public static void clear()
+        {
+            idNhanVien = -1;
+            ChucVu = null;
+        }
         public static Image CvtToImg(byte[] byteImage)
         {
             if (byteImage == null) return null;

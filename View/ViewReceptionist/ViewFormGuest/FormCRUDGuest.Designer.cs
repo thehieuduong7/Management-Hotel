@@ -40,15 +40,15 @@ namespace Management_Hotel.View.ViewReceptionist
             this.buttonAdd = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridViewGuest = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.dataGridViewGuest = new System.Windows.Forms.DataGridView();
             this.panelShow.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGuest)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelShow
@@ -91,7 +91,7 @@ namespace Management_Hotel.View.ViewReceptionist
             this.panel2.BackColor = System.Drawing.Color.Silver;
             this.panel2.Controls.Add(this.textBoxSearch);
             this.panel2.Controls.Add(this.iconPictureBox2);
-            this.panel2.Location = new System.Drawing.Point(55, 189);
+            this.panel2.Location = new System.Drawing.Point(100, 189);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(252, 33);
             this.panel2.TabIndex = 8;
@@ -145,7 +145,7 @@ namespace Management_Hotel.View.ViewReceptionist
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Constantia", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label3.Location = new System.Drawing.Point(49, 153);
+            this.label3.Location = new System.Drawing.Point(94, 153);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(177, 33);
             this.label3.TabIndex = 4;
@@ -163,34 +163,6 @@ namespace Management_Hotel.View.ViewReceptionist
             this.panel1.Size = new System.Drawing.Size(1180, 140);
             this.panel1.TabIndex = 5;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(248, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(593, 55);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "MANAGEMENT GUEST";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 74;
-            this.iconPictureBox1.Location = new System.Drawing.Point(167, 25);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(89, 74);
-            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.iconPictureBox1.TabIndex = 2;
-            this.iconPictureBox1.TabStop = false;
-            this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click);
             // 
             // dataGridViewGuest
             // 
@@ -221,7 +193,7 @@ namespace Management_Hotel.View.ViewReceptionist
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewGuest.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewGuest.EnableHeadersVisualStyles = false;
-            this.dataGridViewGuest.Location = new System.Drawing.Point(76, 237);
+            this.dataGridViewGuest.Location = new System.Drawing.Point(100, 237);
             this.dataGridViewGuest.Name = "dataGridViewGuest";
             this.dataGridViewGuest.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -236,9 +208,35 @@ namespace Management_Hotel.View.ViewReceptionist
             this.dataGridViewGuest.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridViewGuest.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dataGridViewGuest.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewGuest.Size = new System.Drawing.Size(1039, 409);
+            this.dataGridViewGuest.Size = new System.Drawing.Size(1015, 409);
             this.dataGridViewGuest.TabIndex = 4;
             this.dataGridViewGuest.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewGuest_CellContentClick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Cooper Black", 30F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(166, 44);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(167, 46);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "GUEST";
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 60;
+            this.iconPictureBox1.Location = new System.Drawing.Point(100, 30);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(60, 60);
+            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.iconPictureBox1.TabIndex = 8;
+            this.iconPictureBox1.TabStop = false;
             // 
             // FormCRUDGuest
             // 
@@ -257,8 +255,8 @@ namespace Management_Hotel.View.ViewReceptionist
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGuest)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -273,8 +271,8 @@ namespace Management_Hotel.View.ViewReceptionist
         private FontAwesome.Sharp.IconButton buttonAdd;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dataGridViewGuest;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private System.Windows.Forms.DataGridView dataGridViewGuest;
     }
 }

@@ -56,7 +56,6 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
         }
         public void fillDataNew(int id_Phong)
         {
-            this.id_datPhong = id_Phong;
             DataTable data = PhongDAO.Phong_searchByID_func(id_Phong);
             if (data.Rows.Count == 0) return;
             //ID_Phong,TenPhong,Vitri,Photo,Gia,TrangThai

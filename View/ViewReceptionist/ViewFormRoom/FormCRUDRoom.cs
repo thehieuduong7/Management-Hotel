@@ -67,5 +67,10 @@ namespace Management_Hotel.View.ViewReceptionist
             DataTable data= PhongDAO.Phong_searchFilter_func(search);
             this.fillData(data);
         }
+
+        private void buttonRefresh_Click(object sender, EventArgs e)
+        {
+            init();
+        }
     }
 }

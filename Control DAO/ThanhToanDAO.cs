@@ -31,7 +31,7 @@ namespace Management_Hotel.Control_DAO
 
         public static DataTable ThanhToan_TongTienPhong_func(int madat)
         {
-            SqlCommand cmd = new SqlCommand("select dbo.NhapKho_searchByID_func(@MaDat)");
+            SqlCommand cmd = new SqlCommand("select dbo.ThanhToan_TongTienPhong_func(@MaDat)");
             cmd.Parameters.Add("@MaDat", SqlDbType.Int).Value = madat;
             return ConnectionController.getData(cmd);
         }

@@ -19,8 +19,7 @@ namespace Management_Hotel.View.ViewReceptionist
         {
             InitializeComponent();
 
-            if (GlobalUser.nhanVien == null) return;
-            if (GlobalUser.nhanVien.ChucVu == "TiepTan")
+            if (GlobalUser.ChucVu == "TiepTan")
             {
                 this.textboxGia.ReadOnly = true;
             }
@@ -66,9 +65,8 @@ namespace Management_Hotel.View.ViewReceptionist
                 float gia = float.Parse(this.textboxGia.Text);
                 
                 Image photo = this.pictureGuest.Image;
-                if (GlobalUser.nhanVien == null) //return;
 
-               // if (GlobalUser.nhanVien.ChucVu == "TiepTan")
+                if (GlobalUser.ChucVu == "TiepTan")
                 {
                     if (PhongDAO.Phong_upd_sort_proc(id, tenPhong, viTri, photo,null))
                     {

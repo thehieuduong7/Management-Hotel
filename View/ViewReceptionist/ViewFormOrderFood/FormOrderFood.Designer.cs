@@ -33,21 +33,21 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrderFood
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonCancel = new FontAwesome.Sharp.IconButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonOrder = new FontAwesome.Sharp.IconButton();
             this.panelSelect = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.labelTotalMoney = new System.Windows.Forms.Label();
             this.buttonRefresh = new FontAwesome.Sharp.IconButton();
+            this.labelTotalMoney = new System.Windows.Forms.Label();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panelShow = new System.Windows.Forms.Panel();
             this.dataGridViewFood = new System.Windows.Forms.DataGridView();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelLogo.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -76,28 +76,6 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrderFood
             this.buttonCancel.UseVisualStyleBackColor = false;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Constantia", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(269, 84);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 23);
-            this.label3.TabIndex = 113;
-            this.label3.Text = "Search name";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cooper Black", 30F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label1.Location = new System.Drawing.Point(164, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(303, 46);
-            this.label1.TabIndex = 118;
-            this.label1.Text = "ORDER FOOD";
-            // 
             // panelLogo
             // 
             this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -124,7 +102,7 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrderFood
             this.buttonOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.buttonOrder.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.buttonOrder.Font = new System.Drawing.Font("Cooper Black", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonOrder.ForeColor = System.Drawing.Color.Silver;
+            this.buttonOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonOrder.IconChar = FontAwesome.Sharp.IconChar.None;
             this.buttonOrder.IconColor = System.Drawing.Color.Black;
             this.buttonOrder.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -159,30 +137,6 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrderFood
             this.panel1.Size = new System.Drawing.Size(322, 44);
             this.panel1.TabIndex = 3;
             // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.Red;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.MoneyBillAlt;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.Red;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.Location = new System.Drawing.Point(15, 12);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.iconPictureBox1.TabIndex = 0;
-            this.iconPictureBox1.TabStop = false;
-            // 
-            // labelTotalMoney
-            // 
-            this.labelTotalMoney.AutoSize = true;
-            this.labelTotalMoney.Font = new System.Drawing.Font("Cooper Black", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotalMoney.ForeColor = System.Drawing.Color.Red;
-            this.labelTotalMoney.Location = new System.Drawing.Point(53, 7);
-            this.labelTotalMoney.Name = "labelTotalMoney";
-            this.labelTotalMoney.Size = new System.Drawing.Size(105, 31);
-            this.labelTotalMoney.TabIndex = 109;
-            this.labelTotalMoney.Text = "money";
-            // 
             // buttonRefresh
             // 
             this.buttonRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -197,6 +151,30 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrderFood
             this.buttonRefresh.TabIndex = 110;
             this.buttonRefresh.UseVisualStyleBackColor = false;
             this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
+            // 
+            // labelTotalMoney
+            // 
+            this.labelTotalMoney.AutoSize = true;
+            this.labelTotalMoney.Font = new System.Drawing.Font("Cooper Black", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotalMoney.ForeColor = System.Drawing.Color.Red;
+            this.labelTotalMoney.Location = new System.Drawing.Point(53, 7);
+            this.labelTotalMoney.Name = "labelTotalMoney";
+            this.labelTotalMoney.Size = new System.Drawing.Size(105, 31);
+            this.labelTotalMoney.TabIndex = 109;
+            this.labelTotalMoney.Text = "money";
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.Red;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.MoneyBillAlt;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.Red;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.Location = new System.Drawing.Point(15, 12);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.iconPictureBox1.TabIndex = 0;
+            this.iconPictureBox1.TabStop = false;
             // 
             // panelShow
             // 
@@ -295,6 +273,28 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrderFood
             this.panel2.Size = new System.Drawing.Size(239, 29);
             this.panel2.TabIndex = 115;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Constantia", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(269, 84);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(124, 23);
+            this.label3.TabIndex = 113;
+            this.label3.Text = "Search name";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Cooper Black", 30F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label1.Location = new System.Drawing.Point(159, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(303, 46);
+            this.label1.TabIndex = 118;
+            this.label1.Text = "ORDER FOOD";
+            // 
             // FormOrderFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -328,8 +328,6 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrderFood
         #endregion
 
         private FontAwesome.Sharp.IconButton buttonCancel;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton buttonOrder;
@@ -343,5 +341,7 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrderFood
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
     }
 }

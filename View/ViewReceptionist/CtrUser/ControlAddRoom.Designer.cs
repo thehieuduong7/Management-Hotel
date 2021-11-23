@@ -45,7 +45,7 @@ namespace Management_Hotel.View.ViewReceptionist.CtrUser
             this.buttonAdd.IconSize = 50;
             this.buttonAdd.Location = new System.Drawing.Point(0, 0);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(148, 148);
+            this.buttonAdd.Size = new System.Drawing.Size(150, 150);
             this.buttonAdd.TabIndex = 0;
             this.buttonAdd.Text = "Add Room";
             this.buttonAdd.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -60,7 +60,6 @@ namespace Management_Hotel.View.ViewReceptionist.CtrUser
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.buttonAdd);
             this.Name = "ControlAddRoom";
-            this.Size = new System.Drawing.Size(148, 148);
             this.ResumeLayout(false);
 
         }

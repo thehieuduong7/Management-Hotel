@@ -13,7 +13,7 @@ namespace Management_Hotel.Control_DAO
     {
         public static bool AccountNV_add_proc(String username, String password, int idnv,SqlTransaction trans)
         {
-            SqlCommand cmd = new SqlCommand("EXEC  AccountNV_add_proc @User,@Pass,@ID");
+            SqlCommand cmd = new SqlCommand("EXEC AccountNV_add_proc @User,@Pass,@ID");
             cmd.Parameters.Add("@User", SqlDbType.Char).Value = username;
             cmd.Parameters.Add("@Pass", SqlDbType.Char).Value = password;
             cmd.Parameters.Add("@ID", SqlDbType.Int).Value = idnv;

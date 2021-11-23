@@ -19,6 +19,7 @@ namespace Management_Hotel.View.ViewReceptionist
         public FormMenuReceptionist()
         {
             InitializeComponent();
+
         }
         private void resetColorButtonOption()
         {
@@ -32,8 +33,8 @@ namespace Management_Hotel.View.ViewReceptionist
                 catch (InvalidCastException) { continue; }
                 if (button != null)
                 {
-                    button.BackColor = Color.FromArgb(255, 224, 192);
-                    button.ForeColor = Color.FromArgb(255, 128, 128);
+                    button.BackColor = Color.FromArgb(255, 192, 192);
+                    button.ForeColor = Color.Brown;
 
                 }
             }

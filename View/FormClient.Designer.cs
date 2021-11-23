@@ -35,6 +35,7 @@ namespace Management_Hotel.View
             this.panelTop = new System.Windows.Forms.Panel();
             this.labelMess = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelChuVu = new System.Windows.Forms.Label();
             this.buttonLogout = new FontAwesome.Sharp.IconButton();
             this.labelName = new System.Windows.Forms.Label();
             this.picAvatar = new System.Windows.Forms.PictureBox();
@@ -58,9 +59,9 @@ namespace Management_Hotel.View
             // panelShow
             // 
             this.panelShow.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelShow.Location = new System.Drawing.Point(0, 100);
+            this.panelShow.Location = new System.Drawing.Point(0, 128);
             this.panelShow.Name = "panelShow";
-            this.panelShow.Size = new System.Drawing.Size(1380, 680);
+            this.panelShow.Size = new System.Drawing.Size(1380, 652);
             this.panelShow.TabIndex = 3;
             // 
             // panelTop
@@ -73,7 +74,7 @@ namespace Management_Hotel.View
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1380, 100);
+            this.panelTop.Size = new System.Drawing.Size(1380, 128);
             this.panelTop.TabIndex = 2;
             // 
             // labelMess
@@ -91,6 +92,7 @@ namespace Management_Hotel.View
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel1.Controls.Add(this.labelChuVu);
             this.panel1.Controls.Add(this.buttonLogout);
             this.panel1.Controls.Add(this.labelName);
             this.panel1.Controls.Add(this.picAvatar);
@@ -98,6 +100,18 @@ namespace Management_Hotel.View
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(290, 43);
             this.panel1.TabIndex = 1;
+            // 
+            // labelChuVu
+            // 
+            this.labelChuVu.AutoSize = true;
+            this.labelChuVu.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelChuVu.ForeColor = System.Drawing.Color.Brown;
+            this.labelChuVu.Location = new System.Drawing.Point(68, 21);
+            this.labelChuVu.Margin = new System.Windows.Forms.Padding(0);
+            this.labelChuVu.Name = "labelChuVu";
+            this.labelChuVu.Size = new System.Drawing.Size(43, 15);
+            this.labelChuVu.TabIndex = 3;
+            this.labelChuVu.Text = "label1";
             // 
             // buttonLogout
             // 
@@ -115,17 +129,17 @@ namespace Management_Hotel.View
             this.buttonLogout.TabIndex = 2;
             this.buttonLogout.Text = "Log out";
             this.buttonLogout.UseVisualStyleBackColor = true;
+            this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
             // 
             // labelName
             // 
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("Britannic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelName.ForeColor = System.Drawing.Color.Brown;
-            this.labelName.Location = new System.Drawing.Point(68, 11);
+            this.labelName.Location = new System.Drawing.Point(68, 3);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(67, 15);
+            this.labelName.Size = new System.Drawing.Size(0, 15);
             this.labelName.TabIndex = 1;
-            this.labelName.Text = "labelName";
             // 
             // picAvatar
             // 
@@ -145,7 +159,7 @@ namespace Management_Hotel.View
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Location = new System.Drawing.Point(1244, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(136, 100);
+            this.panel4.Size = new System.Drawing.Size(136, 128);
             this.panel4.TabIndex = 4;
             // 
             // panel5
@@ -213,6 +227,7 @@ namespace Management_Hotel.View
             this.buttonClose.Size = new System.Drawing.Size(44, 43);
             this.buttonClose.TabIndex = 5;
             this.buttonClose.UseVisualStyleBackColor = false;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // panel3
             // 
@@ -221,7 +236,7 @@ namespace Management_Hotel.View
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 100);
+            this.panel3.Size = new System.Drawing.Size(200, 128);
             this.panel3.TabIndex = 3;
             // 
             // pictureBoxLogo
@@ -234,15 +249,18 @@ namespace Management_Hotel.View
             this.pictureBoxLogo.IconColor = System.Drawing.Color.Brown;
             this.pictureBoxLogo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.pictureBoxLogo.IconSize = 65;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(53, 21);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(51, 32);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(67, 65);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxLogo.TabIndex = 0;
             this.pictureBoxLogo.TabStop = false;
+            this.pictureBoxLogo.Click += new System.EventHandler(this.pictureBoxLogo_Click);
             // 
             // timer1
             // 
             this.timer1.Interval = 10;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FormClient
             // 
@@ -284,5 +302,6 @@ namespace Management_Hotel.View
         private System.Windows.Forms.Panel panel3;
         private FontAwesome.Sharp.IconPictureBox pictureBoxLogo;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label labelChuVu;
     }
 }

@@ -13,10 +13,10 @@ namespace Management_Hotel.Control_DAO
     {
         public static bool DatMon_add_proc(int id_datphong, int id_mon, int soluong,SqlTransaction trans)
         {
-            SqlCommand cmd = new SqlCommand("EXEC  DatPhong_add_proc @ID_DatPhong,@ID_Mon,@SoLuong");
-            cmd.Parameters.Add("@ID_DatPhong", SqlDbType.Char).Value = id_datphong;
-            cmd.Parameters.Add("@ID_Mon", SqlDbType.Char).Value = id_mon;
-            cmd.Parameters.Add("@SoLuong", SqlDbType.Char).Value = soluong;
+            SqlCommand cmd = new SqlCommand("EXEC  DatMon_add_proc @ID_DatPhong,@ID_Mon,@SoLuong");
+            cmd.Parameters.Add("@ID_DatPhong", SqlDbType.Int).Value = id_datphong;
+            cmd.Parameters.Add("@ID_Mon", SqlDbType.Int).Value = id_mon;
+            cmd.Parameters.Add("@SoLuong", SqlDbType.Int).Value = soluong;
             if (trans != null)
             {
                 cmd.Transaction = trans;
@@ -37,9 +37,9 @@ namespace Management_Hotel.Control_DAO
             cmd.Parameters.Add("@MaDat", SqlDbType.Int).Value = madat;
             return ConnectionController.getData(cmd);
         }
-        public static DataTable DatMon_tongTienDatMon(int madat)
+        public static DataTable DatMon_tongTienDatMon_func(int madat)
         {
-            SqlCommand cmd = new SqlCommand("select dbo.DatMon_tongTienDatMon(@MaDat)");
+            SqlCommand cmd = new SqlCommand("select dbo.DatMon_tongTienDatMon_func(@MaDat)");
             cmd.Parameters.Add("@MaDat", SqlDbType.Int).Value = madat;
             return ConnectionController.getData(cmd);
         }

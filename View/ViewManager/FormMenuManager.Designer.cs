@@ -30,6 +30,8 @@ namespace Management_Hotel.View.ViewManager
         private void InitializeComponent()
         {
             this.panelOption = new System.Windows.Forms.Panel();
+            this.buttonReportOption = new FontAwesome.Sharp.IconButton();
+            this.buttonEmployeeOption = new FontAwesome.Sharp.IconButton();
             this.buttonOrderRoom = new FontAwesome.Sharp.IconButton();
             this.buttonFood = new FontAwesome.Sharp.IconButton();
             this.buttonGuest = new FontAwesome.Sharp.IconButton();
@@ -37,9 +39,6 @@ namespace Management_Hotel.View.ViewManager
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelShow = new System.Windows.Forms.Panel();
-            this.buttonEmployeeOption = new FontAwesome.Sharp.IconButton();
-            this.buttonAccount = new FontAwesome.Sharp.IconButton();
-            this.buttonReportOption = new FontAwesome.Sharp.IconButton();
             this.panelOption.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +47,6 @@ namespace Management_Hotel.View.ViewManager
             this.panelOption.AutoScroll = true;
             this.panelOption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.panelOption.Controls.Add(this.buttonReportOption);
-            this.panelOption.Controls.Add(this.buttonAccount);
             this.panelOption.Controls.Add(this.buttonEmployeeOption);
             this.panelOption.Controls.Add(this.buttonOrderRoom);
             this.panelOption.Controls.Add(this.buttonFood);
@@ -62,6 +60,52 @@ namespace Management_Hotel.View.ViewManager
             this.panelOption.Name = "panelOption";
             this.panelOption.Size = new System.Drawing.Size(200, 780);
             this.panelOption.TabIndex = 2;
+            // 
+            // buttonReportOption
+            // 
+            this.buttonReportOption.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonReportOption.FlatAppearance.BorderSize = 0;
+            this.buttonReportOption.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.buttonReportOption.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonReportOption.Font = new System.Drawing.Font("Lucida Console", 10F);
+            this.buttonReportOption.ForeColor = System.Drawing.Color.Brown;
+            this.buttonReportOption.IconChar = FontAwesome.Sharp.IconChar.File;
+            this.buttonReportOption.IconColor = System.Drawing.Color.Brown;
+            this.buttonReportOption.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.buttonReportOption.IconSize = 40;
+            this.buttonReportOption.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonReportOption.Location = new System.Drawing.Point(10, 250);
+            this.buttonReportOption.Name = "buttonReportOption";
+            this.buttonReportOption.Size = new System.Drawing.Size(180, 50);
+            this.buttonReportOption.TabIndex = 16;
+            this.buttonReportOption.Text = "Report";
+            this.buttonReportOption.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonReportOption.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonReportOption.UseVisualStyleBackColor = true;
+            this.buttonReportOption.Click += new System.EventHandler(this.buttonReportOption_Click_1);
+            // 
+            // buttonEmployeeOption
+            // 
+            this.buttonEmployeeOption.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonEmployeeOption.FlatAppearance.BorderSize = 0;
+            this.buttonEmployeeOption.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.buttonEmployeeOption.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEmployeeOption.Font = new System.Drawing.Font("Lucida Console", 10F);
+            this.buttonEmployeeOption.ForeColor = System.Drawing.Color.Brown;
+            this.buttonEmployeeOption.IconChar = FontAwesome.Sharp.IconChar.Users;
+            this.buttonEmployeeOption.IconColor = System.Drawing.Color.Brown;
+            this.buttonEmployeeOption.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.buttonEmployeeOption.IconSize = 40;
+            this.buttonEmployeeOption.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonEmployeeOption.Location = new System.Drawing.Point(10, 200);
+            this.buttonEmployeeOption.Name = "buttonEmployeeOption";
+            this.buttonEmployeeOption.Size = new System.Drawing.Size(180, 50);
+            this.buttonEmployeeOption.TabIndex = 13;
+            this.buttonEmployeeOption.Text = "Employee";
+            this.buttonEmployeeOption.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonEmployeeOption.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonEmployeeOption.UseVisualStyleBackColor = true;
+            this.buttonEmployeeOption.Click += new System.EventHandler(this.buttonEmployeeOption_Click_1);
             // 
             // buttonOrderRoom
             // 
@@ -176,75 +220,6 @@ namespace Management_Hotel.View.ViewManager
             this.panelShow.Size = new System.Drawing.Size(1150, 780);
             this.panelShow.TabIndex = 4;
             // 
-            // buttonEmployeeOption
-            // 
-            this.buttonEmployeeOption.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonEmployeeOption.FlatAppearance.BorderSize = 0;
-            this.buttonEmployeeOption.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.buttonEmployeeOption.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEmployeeOption.Font = new System.Drawing.Font("Lucida Console", 10F);
-            this.buttonEmployeeOption.ForeColor = System.Drawing.Color.Brown;
-            this.buttonEmployeeOption.IconChar = FontAwesome.Sharp.IconChar.Users;
-            this.buttonEmployeeOption.IconColor = System.Drawing.Color.Brown;
-            this.buttonEmployeeOption.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.buttonEmployeeOption.IconSize = 40;
-            this.buttonEmployeeOption.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEmployeeOption.Location = new System.Drawing.Point(10, 200);
-            this.buttonEmployeeOption.Name = "buttonEmployeeOption";
-            this.buttonEmployeeOption.Size = new System.Drawing.Size(180, 50);
-            this.buttonEmployeeOption.TabIndex = 13;
-            this.buttonEmployeeOption.Text = "Employee";
-            this.buttonEmployeeOption.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEmployeeOption.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonEmployeeOption.UseVisualStyleBackColor = true;
-            this.buttonEmployeeOption.Click += new System.EventHandler(this.buttonEmployeeOption_Click_1);
-            // 
-            // buttonAccount
-            // 
-            this.buttonAccount.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonAccount.FlatAppearance.BorderSize = 0;
-            this.buttonAccount.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.buttonAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAccount.Font = new System.Drawing.Font("Lucida Console", 10F);
-            this.buttonAccount.ForeColor = System.Drawing.Color.Brown;
-            this.buttonAccount.IconChar = FontAwesome.Sharp.IconChar.SignInAlt;
-            this.buttonAccount.IconColor = System.Drawing.Color.Brown;
-            this.buttonAccount.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.buttonAccount.IconSize = 40;
-            this.buttonAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAccount.Location = new System.Drawing.Point(10, 250);
-            this.buttonAccount.Name = "buttonAccount";
-            this.buttonAccount.Size = new System.Drawing.Size(180, 50);
-            this.buttonAccount.TabIndex = 15;
-            this.buttonAccount.Text = "Account";
-            this.buttonAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAccount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonAccount.UseVisualStyleBackColor = true;
-            this.buttonAccount.Click += new System.EventHandler(this.buttonAccount_Click);
-            // 
-            // buttonReportOption
-            // 
-            this.buttonReportOption.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonReportOption.FlatAppearance.BorderSize = 0;
-            this.buttonReportOption.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.buttonReportOption.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonReportOption.Font = new System.Drawing.Font("Lucida Console", 10F);
-            this.buttonReportOption.ForeColor = System.Drawing.Color.Brown;
-            this.buttonReportOption.IconChar = FontAwesome.Sharp.IconChar.File;
-            this.buttonReportOption.IconColor = System.Drawing.Color.Brown;
-            this.buttonReportOption.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.buttonReportOption.IconSize = 40;
-            this.buttonReportOption.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonReportOption.Location = new System.Drawing.Point(10, 300);
-            this.buttonReportOption.Name = "buttonReportOption";
-            this.buttonReportOption.Size = new System.Drawing.Size(180, 50);
-            this.buttonReportOption.TabIndex = 16;
-            this.buttonReportOption.Text = "Report";
-            this.buttonReportOption.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonReportOption.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonReportOption.UseVisualStyleBackColor = true;
-            this.buttonReportOption.Click += new System.EventHandler(this.buttonReportOption_Click_1);
-            // 
             // FormMenuManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,12 +242,11 @@ namespace Management_Hotel.View.ViewManager
         private System.Windows.Forms.Panel panelShow;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
+        private FontAwesome.Sharp.IconButton buttonEmployeeOption;
+        private FontAwesome.Sharp.IconButton buttonReportOption;
         private FontAwesome.Sharp.IconButton buttonOrderRoom;
         private FontAwesome.Sharp.IconButton buttonFood;
         private FontAwesome.Sharp.IconButton buttonGuest;
         private FontAwesome.Sharp.IconButton buttonRoom;
-        private FontAwesome.Sharp.IconButton buttonReportOption;
-        private FontAwesome.Sharp.IconButton buttonAccount;
-        private FontAwesome.Sharp.IconButton buttonEmployeeOption;
     }
 }

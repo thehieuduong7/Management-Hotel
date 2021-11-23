@@ -12,13 +12,42 @@ namespace Management_Hotel.Control
 {
     public class ConnectionController
     {
-        public static SqlConnection connection { get; set; }
+        public static SqlConnection connection { get; set; }    
         public static void init()
         {
             if (ConnectionController.connection == null)
                 ConnectionController.connection =
                  new SqlConnection(@"Data Source=DESKTOP-AV5GUUN\SQLEXPRESS;Initial Catalog=projectDBMS;Integrated Security=True");
 
+            new SqlConnection( @"Data Source=DESKTOP-AV5GUUN\SQLEXPRESS;Initial Catalog=projectDBMS;User ID=thehieu");
+            connection.Open();
+
+        }
+        public static bool login(String username, string password)
+        {
+            String connect_str = String.Format(@"Data Source=DESKTOP-AV5GUUN\SQLEXPRESS;Initial Catalog=projectDBMS;" +
+                "User ID={0};Password={1};",username,password);
+            try
+            {
+                ConnectionController.connection =
+                new SqlConnection(connect_str);
+                if (ConnectionController.connection == null)
+                    return false;
+                ConnectionController.connection.Open();
+                return true;
+            }
+            catch (SqlException)
+            {
+                ConnectionController.connection = null;
+                return false;
+            }
+        }
+        public static void logout()
+        {
+            if (ConnectionController.connection == null) return;
+            ConnectionController.connection.Close();
+            ConnectionController.connection.Dispose();
+            ConnectionController.connection = null;
         }
         public static void open()
         {
@@ -31,11 +60,13 @@ namespace Management_Hotel.Control
         public static bool execute(SqlCommand cmd)
         {
             cmd.Connection = connection;
-           connection.Open();
+           //connection.Open();
             bool result = false;
             try
             {
-                result = (cmd.ExecuteNonQuery() == 1);
+                // result = (cmd.ExecuteNonQuery() == 1);
+                cmd.ExecuteNonQuery();
+                result = true;
             }
             catch (SqlException)
             {
@@ -43,23 +74,33 @@ namespace Management_Hotel.Control
             }
             finally
             {
-               connection.Close();
+              // connection.Close();
             }
             return result;
         }
         public static DataTable getData(SqlCommand cmd)
         {
-            connection.Open();
+            //connection.Open();
             cmd.Connection = connection;
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            DataTable table = new DataTable();
-            adapter.Fill(table);
-            connection.Close();
-            return table;
+            try
+            {
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                return table;
+            }
+            catch (SqlException)
+            {
+                return null;
+            }
+            finally
+            {
+                //connection.Close();
+
+            }
         }
         public static SqlTransaction beginTransaction()
         {
-            connection.Open();
             return connection.BeginTransaction();
         }
     }

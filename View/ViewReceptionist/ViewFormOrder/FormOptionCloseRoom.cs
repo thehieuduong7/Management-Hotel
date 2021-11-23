@@ -34,7 +34,7 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
             int id_guest = FormSelectGuest.get_id_guesst();
             try
             {
-                if (DatPhongDAO.DatPhong_add_proc(id_guest,this.id_phong,GlobalUser.nhanVien.ID,null))
+                if (DatPhongDAO.DatPhong_add_proc(id_guest,this.id_phong,GlobalUser.idNhanVien,null))
                 {
                     MessageBox.Show("Dat phong success", "Management Hotel",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -1,5 +1,9 @@
 ﻿using Management_Hotel.Control;
+using Management_Hotel.Control_DAO;
 using Management_Hotel.Model;
+using Management_Hotel.View.ViewAdmin;
+using Management_Hotel.View.ViewManager;
+using Management_Hotel.View.ViewReceptionist;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,22 +25,6 @@ namespace Management_Hotel.View
         }
  
 
-        private string pos = "Khách Hàng";
-        private void radioLabour_CheckedChanged(object sender, EventArgs e)
-        {
-            this.pos = "Khách Hàng";
-        }
-
-        private void radioRecept_CheckedChanged(object sender, EventArgs e)
-        {
-            this.pos = "Nhân Viên";
-        }
-
-        private void radioManager_CheckedChanged(object sender, EventArgs e)
-        {
-            this.pos = "Admin";
-        }
-
         private void buttonExit_Click(object sender, EventArgs e)
         {
             this.Dispose();
@@ -51,7 +39,45 @@ namespace Management_Hotel.View
         }
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            
+            if (!isFull())
+            {
+                MessageBox.Show("Fail", "Management Hotel",
+    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            string username = this.textBoxUser.Text.Trim();
+            string password = this.textBoxPass.Text.Trim();
+
+            if (ConnectionController.login(username, password))
+            {
+
+                DataTable data = AccountNVDAO.AccountNV_login_func(username, password);
+                if (data != null && data.Rows.Count!=0)
+                {
+                    GlobalUser.idNhanVien = int.Parse(data.Rows[0][2].ToString());
+                    GlobalUser.ChucVu = data.Rows[0][4].ToString().Trim();
+                }
+                else
+                {
+                    GlobalUser.ChucVu = "Admin";
+                }
+                this.Visible = false;
+                Form form = new FormClient();
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    this.Visible = true;
+                }
+                else
+                {
+                    this.Dispose();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Wrong username or password", "Management Hotel",
+MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
         }
     }
 }

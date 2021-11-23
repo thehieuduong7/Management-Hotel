@@ -1,4 +1,5 @@
-﻿using Management_Hotel.Model;
+﻿using Management_Hotel.Control_DAO;
+using Management_Hotel.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,20 +18,37 @@ namespace Management_Hotel.View.ViewReceptionist.CtrUser
         {
             InitializeComponent();
         }
-        public int id { get; set; }
-        String tenMon;public float Gia { get; set; }
-        int max; Image image;
-        public int soLuong { get; set; }
-        public bool fillData(int id, String tenMon,float Gia,int max,Image image)
+        int id;
+        int soLuong;
+        int soLuongMax;
+        float gia;
+        public int getID() => id;
+        public int getSoLuong() => soLuong;
+        public float getGia() => gia;
+        public void setMax(int max)
         {
-            this.id = id; this.tenMon = tenMon; this.Gia = Gia; this.max = max; this.image = image;
-            if (max == 0) return false;
+            this.soLuongMax = max;
+        }
+        public bool fillData(int id_food)
+        {
+            this.id = id_food;
+            DataTable data = KhoDAO.Kho_searchByID_func(id_food);
+            if (data == null) return false;
+            string tenMon = data.Rows[0][1].ToString().Trim() ;
+            int SoLuongMax = int.Parse(data.Rows[0][2].ToString().Trim());
+            String gia = data.Rows[0][4].ToString().Trim();
+            Image img = GlobalUser.CvtToImg((byte[])data.Rows[0][5]);
+            if (SoLuongMax == 0) return false;
+
+
             this.labelID.Text = string.Format("ID: {0}",id);
             this.labelName.Text = string.Format("Name: {0}", tenMon);
-            this.labelPrice.Text = string.Format("Price: {0}d", Gia);
-            this.pictureFood.Image = image;
-            this.max = max;
+            this.labelPrice.Text = string.Format("Price: {0}d", gia);
+            if(img != null)
+                this.pictureFood.Image = img;
+            this.soLuongMax = SoLuongMax;
             this.soLuong = 1;
+            this.gia = float.Parse(gia);
             this.labelAmount.Text =this.soLuong.ToString();
             return true;
         }
@@ -52,11 +70,10 @@ namespace Management_Hotel.View.ViewReceptionist.CtrUser
         public void buttonPlus_Click(object sender, EventArgs e)
         {
             
-            if(this.soLuong<this.max)
+            if(this.soLuong<this.soLuongMax)
             {
                 this.soLuong++;
                 this.labelAmount.Text = this.soLuong.ToString();
-                
             }
             else
             {

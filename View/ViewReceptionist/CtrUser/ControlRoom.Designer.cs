@@ -49,9 +49,9 @@ namespace Management_Hotel.View.ViewReceptionist.CtrUser
             this.buttonEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.buttonEdit.IconSize = 35;
             this.buttonEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEdit.Location = new System.Drawing.Point(0, 115);
+            this.buttonEdit.Location = new System.Drawing.Point(0, 117);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(148, 33);
+            this.buttonEdit.Size = new System.Drawing.Size(150, 33);
             this.buttonEdit.TabIndex = 1;
             this.buttonEdit.Text = "Money";
             this.buttonEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -84,7 +84,7 @@ namespace Management_Hotel.View.ViewReceptionist.CtrUser
             this.label_room.BackColor = System.Drawing.Color.LightGray;
             this.label_room.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_room.ForeColor = System.Drawing.Color.Black;
-            this.label_room.Location = new System.Drawing.Point(47, 33);
+            this.label_room.Location = new System.Drawing.Point(47, 34);
             this.label_room.Name = "label_room";
             this.label_room.Size = new System.Drawing.Size(52, 17);
             this.label_room.TabIndex = 4;
@@ -99,10 +99,10 @@ namespace Management_Hotel.View.ViewReceptionist.CtrUser
             this.pictureLogo.IconChar = FontAwesome.Sharp.IconChar.DoorClosed;
             this.pictureLogo.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pictureLogo.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.pictureLogo.IconSize = 148;
+            this.pictureLogo.IconSize = 150;
             this.pictureLogo.Location = new System.Drawing.Point(0, 0);
             this.pictureLogo.Name = "pictureLogo";
-            this.pictureLogo.Size = new System.Drawing.Size(148, 148);
+            this.pictureLogo.Size = new System.Drawing.Size(150, 150);
             this.pictureLogo.TabIndex = 0;
             this.pictureLogo.TabStop = false;
             this.pictureLogo.Click += new System.EventHandler(this.pictureLogo_Click);
@@ -117,7 +117,6 @@ namespace Management_Hotel.View.ViewReceptionist.CtrUser
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.pictureLogo);
             this.Name = "ControlRoom";
-            this.Size = new System.Drawing.Size(148, 148);
             ((System.ComponentModel.ISupportInitialize)(this.pictureLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

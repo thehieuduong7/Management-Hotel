@@ -248,7 +248,7 @@ namespace Management_Hotel.View.ViewManager
             this.textBoxLuong.Location = new System.Drawing.Point(127, 344);
             this.textBoxLuong.Name = "textBoxLuong";
             this.textBoxLuong.Size = new System.Drawing.Size(181, 19);
-            this.textBoxLuong.TabIndex = 174;
+            this.textBoxLuong.TabIndex = 169;
             // 
             // label10
             // 
@@ -289,7 +289,7 @@ namespace Management_Hotel.View.ViewManager
             this.textBoxTen.Location = new System.Drawing.Point(127, 174);
             this.textBoxTen.Name = "textBoxTen";
             this.textBoxTen.Size = new System.Drawing.Size(188, 19);
-            this.textBoxTen.TabIndex = 179;
+            this.textBoxTen.TabIndex = 167;
             // 
             // label2
             // 
@@ -351,7 +351,7 @@ namespace Management_Hotel.View.ViewManager
             this.textboxPhone.Location = new System.Drawing.Point(127, 266);
             this.textboxPhone.Name = "textboxPhone";
             this.textboxPhone.Size = new System.Drawing.Size(181, 19);
-            this.textboxPhone.TabIndex = 170;
+            this.textboxPhone.TabIndex = 168;
             // 
             // label6
             // 

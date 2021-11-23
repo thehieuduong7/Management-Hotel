@@ -24,6 +24,7 @@ namespace Management_Hotel.View.ViewReceptionist.CtrUser
         public void fillData(int id_room)
         {
             //ID_Phong,TenPhong,Vitri,Photo,Gia,TrangThai
+            this.id_room = id_room;
             DataTable data = PhongDAO.Phong_searchByID_func(id_room);
             if (data.Rows.Count == 0) return;
             string tenPhong = data.Rows[0][1].ToString().Trim();
@@ -45,17 +46,24 @@ namespace Management_Hotel.View.ViewReceptionist.CtrUser
         public void open_load()
         {
             this.buttonOrder.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
-            this.buttonOrder.BackColor = Color.Red;
+            this.buttonOrder.ForeColor = Color.White;
+            this.buttonOrder.IconColor = Color.White;
+            this.buttonOrder.BackColor = Color.Brown;
         }
         public void closed_load()
         {
             this.buttonOrder.IconChar = FontAwesome.Sharp.IconChar.DoorClosed;
-            this.buttonOrder.BackColor = Color.DimGray;
+            this.buttonOrder.BackColor = Color.FromArgb(192, 192, 255);
+            this.buttonOrder.ForeColor = Color.Blue;
+            this.buttonOrder.IconColor = Color.Blue;
         }
         public void open_click()
         {
             FormOptionOpenRoom form = new FormOptionOpenRoom();
-            form.fillData(this.id_room);
+            if (!form.fillData(this.id_room))
+            {
+
+            }
             form.formParent = this.formParent;
             form.ShowDialog();
         }

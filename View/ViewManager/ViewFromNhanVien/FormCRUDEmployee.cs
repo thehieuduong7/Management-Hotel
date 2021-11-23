@@ -111,7 +111,10 @@ MessageBoxButtons.OK, MessageBoxIcon.Error);
             int id = int.Parse(str_id);
             FormEditEmployee form = new FormEditEmployee();
             form.fillData(id);
-            form.ShowDialog();
+            if (form.ShowDialog()==DialogResult.OK)
+            {
+                init();
+            }
         }
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)

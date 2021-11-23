@@ -135,7 +135,7 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
             // 
             this.labelIDOld.AutoSize = true;
             this.labelIDOld.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIDOld.Location = new System.Drawing.Point(155, 63);
+            this.labelIDOld.Location = new System.Drawing.Point(130, 63);
             this.labelIDOld.Name = "labelIDOld";
             this.labelIDOld.Size = new System.Drawing.Size(86, 17);
             this.labelIDOld.TabIndex = 119;
@@ -147,9 +147,9 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(63, 63);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(86, 17);
+            this.label9.Size = new System.Drawing.Size(74, 17);
             this.label9.TabIndex = 118;
-            this.label9.Text = "Username:";
+            this.label9.Text = "ID Room:";
             // 
             // labelGiaNew
             // 

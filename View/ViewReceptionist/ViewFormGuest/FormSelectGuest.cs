@@ -28,20 +28,19 @@ namespace Management_Hotel.View.ViewReceptionist
         }
         public void fillData(DataTable data)
         {
-            data.Columns.RemoveAt(3);
-            data.Columns.RemoveAt(4);
 
+            // ID_Mon,TenMon,SoLuong,GiaGoc,GiaBan,Photo;
             this.dataGridViewGuest.DataSource = data;
             this.dataGridViewGuest.AllowUserToAddRows = false;
             this.dataGridViewGuest.RowTemplate.Height = 60;
-            int[] colWidth = { 50, 100, 160, 60, 60, };
-            string[] colName = { "ID", "Ho", "Ten", "Gioi Tinh", "Avatar" };
+            int[] colWidth = { 50, 100, 160, 100, 100, 80};
+            string[] colName = { "ID", "Ten Mon", "So Luong Trong Kho", "Gia Goc","Gia Ban", "Photo" };
             for (int i = 0; i < colName.Length; i++)
             {
                 this.dataGridViewGuest.Columns[i].HeaderText = colName[i];
                 this.dataGridViewGuest.Columns[i].Width = colWidth[i];
             }
-            this.dataGridViewGuest.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewGuest.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewGuest.ReadOnly = true;
             this.dataGridViewGuest.ClearSelection();
         }

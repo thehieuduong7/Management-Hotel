@@ -72,7 +72,7 @@ namespace Management_Hotel.View.ViewManager
             this.ComboChucVu.Location = new System.Drawing.Point(120, 389);
             this.ComboChucVu.Name = "ComboChucVu";
             this.ComboChucVu.Size = new System.Drawing.Size(268, 21);
-            this.ComboChucVu.TabIndex = 143;
+            this.ComboChucVu.TabIndex = 128;
             // 
             // label11
             // 
@@ -100,7 +100,7 @@ namespace Management_Hotel.View.ViewManager
             this.textBoxLuong.Location = new System.Drawing.Point(126, 342);
             this.textBoxLuong.Name = "textBoxLuong";
             this.textBoxLuong.Size = new System.Drawing.Size(255, 19);
-            this.textBoxLuong.TabIndex = 132;
+            this.textBoxLuong.TabIndex = 127;
             // 
             // label10
             // 
@@ -141,7 +141,7 @@ namespace Management_Hotel.View.ViewManager
             this.textBoxTen.Location = new System.Drawing.Point(126, 172);
             this.textBoxTen.Name = "textBoxTen";
             this.textBoxTen.Size = new System.Drawing.Size(188, 19);
-            this.textBoxTen.TabIndex = 137;
+            this.textBoxTen.TabIndex = 125;
             // 
             // label2
             // 
@@ -203,7 +203,7 @@ namespace Management_Hotel.View.ViewManager
             this.textboxPhone.Location = new System.Drawing.Point(126, 264);
             this.textboxPhone.Name = "textboxPhone";
             this.textboxPhone.Size = new System.Drawing.Size(255, 19);
-            this.textboxPhone.TabIndex = 128;
+            this.textboxPhone.TabIndex = 126;
             // 
             // label6
             // 

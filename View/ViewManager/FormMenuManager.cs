@@ -1,4 +1,5 @@
-﻿using Management_Hotel.View.ViewManager.ViewFormAccount;
+﻿using Management_Hotel.View.ViewAdmin.ViewFormReport;
+using Management_Hotel.View.ViewManager.ViewFormAccount;
 using Management_Hotel.View.ViewReceptionist;
 using Management_Hotel.View.ViewReceptionist.ViewFormOrder;
 using System;
@@ -40,17 +41,7 @@ namespace Management_Hotel.View.ViewManager
         }
 
   
-        private void buttonInformation_MouseMove(object sender, MouseEventArgs e)
-        {
-            Button btn = (Button)sender;
-            btn.ForeColor = Color.White;
-        }
 
-        private void buttonInformation_MouseLeave(object sender, EventArgs e)
-        {
-            Button btn = (Button)sender;
-            btn.ForeColor = Color.Silver;
-        }
 
 
         private void resetColorButtonOption()
@@ -82,10 +73,6 @@ namespace Management_Hotel.View.ViewManager
             selectButtonOption(this.buttonReportOption);
         }
 
-        private void buttonEmployeeOption_Click(object sender, EventArgs e)
-        {
-            selectButtonOption(this.buttonEmployeeOption);
-        }
 
         private void buttonRoom_Click(object sender, EventArgs e)
         {
@@ -122,16 +109,12 @@ namespace Management_Hotel.View.ViewManager
             openChildForm(form);
         }
 
-        private void buttonAccount_Click(object sender, EventArgs e)
-        {
-            selectButtonOption(this.buttonAccount);
-            FormCRUDAccount form = new FormCRUDAccount();
-            openChildForm(form);
-        }
 
         private void buttonReportOption_Click_1(object sender, EventArgs e)
         {
-
+            selectButtonOption(this.buttonReportOption);
+            Form form = new FormReport();
+            openChildForm(form);
         }
     }
 }

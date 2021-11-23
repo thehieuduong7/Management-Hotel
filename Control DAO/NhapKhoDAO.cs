@@ -11,9 +11,9 @@ namespace Management_Hotel.Control_DAO
 {
     public class NhapKhoDAO
     {
-        public bool NhapKho_add_proc(int idmon, int soluong, int id_nvnhap,SqlTransaction trans)
+        public static bool NhapKho_add_proc(int idmon, int soluong, int id_nvnhap,SqlTransaction trans)
         {
-            SqlCommand cmd = new SqlCommand("EXEC  NhapKho_add_proc @ID_Mon,@SoLuong,@ID_NVNhap");
+            SqlCommand cmd = new SqlCommand("EXEC NhapKho_add_proc @ID_Mon,@SoLuong,@ID_NVNhap");
             cmd.Parameters.Add("@ID_Mon", SqlDbType.Int).Value = idmon;
             cmd.Parameters.Add("@SoLuong", SqlDbType.Int).Value = soluong;
             cmd.Parameters.Add("@ID_NVNhap", SqlDbType.Int).Value = id_nvnhap;
@@ -23,20 +23,20 @@ namespace Management_Hotel.Control_DAO
             }
             return ConnectionController.execute(cmd);
         }
-        public DataTable NhapKho_TongNhap_view()
+        public static DataTable NhapKho_TongNhap_view()
         {
             SqlCommand cmd = new SqlCommand("select ID_Mon,TenMon,TongSoLuongDaNhap," +
                 "GiaGoc,GiaBan,Photo from NhapKho_TongNhap_view");
             return ConnectionController.getData(cmd);
         }
-        public DataTable NhapKho_detail_view()
+        public static DataTable NhapKho_detail_view()
         {
             SqlCommand cmd = new SqlCommand("select ID_NhapKho,ID_Mon,TenMon," +
                 "SoluongNhap,GiaGoc,GiaBan,Photo,ThoiGianNhap from NhapKho_detail_view");
             return ConnectionController.getData(cmd);
         }
 
-        public DataTable NhapKho_searchByID_func(int mon)
+        public static DataTable NhapKho_searchByID_func(int mon)
         {
             SqlCommand cmd = new SqlCommand("select ID_NhapKho,ID_Mon,TenMon,SoluongNhap," +
                 "GiaGoc,GiaBan,Photo,ThoiGianNhap from  dbo.NhapKho_searchByID_func(@Mon)");

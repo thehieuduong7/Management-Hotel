@@ -33,10 +33,10 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            this.labelMoneyPay = new System.Windows.Forms.Label();
+            this.label_MoneyPay = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
-            this.labelMoneyFood = new System.Windows.Forms.Label();
+            this.label_MoneyFood = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.buttonPay = new FontAwesome.Sharp.IconButton();
@@ -44,7 +44,7 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
             this.dataGridViewFood = new System.Windows.Forms.DataGridView();
             this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
             this.labelPrice = new System.Windows.Forms.Label();
-            this.label_TotalmoneyRoom = new System.Windows.Forms.Label();
+            this.label_TotalDatPhong = new System.Windows.Forms.Label();
             this.labeltenRoom = new System.Windows.Forms.Label();
             this.label_Daystart = new System.Windows.Forms.Label();
             this.buttonCancel = new FontAwesome.Sharp.IconButton();
@@ -59,9 +59,9 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.labelTrangThai = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
@@ -84,16 +84,16 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
             this.iconPictureBox2.TabIndex = 140;
             this.iconPictureBox2.TabStop = false;
             // 
-            // labelMoneyPay
+            // label_MoneyPay
             // 
-            this.labelMoneyPay.AutoSize = true;
-            this.labelMoneyPay.Font = new System.Drawing.Font("Cooper Black", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMoneyPay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.labelMoneyPay.Location = new System.Drawing.Point(286, 411);
-            this.labelMoneyPay.Name = "labelMoneyPay";
-            this.labelMoneyPay.Size = new System.Drawing.Size(105, 31);
-            this.labelMoneyPay.TabIndex = 138;
-            this.labelMoneyPay.Text = "money";
+            this.label_MoneyPay.AutoSize = true;
+            this.label_MoneyPay.Font = new System.Drawing.Font("Cooper Black", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_MoneyPay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label_MoneyPay.Location = new System.Drawing.Point(286, 411);
+            this.label_MoneyPay.Name = "label_MoneyPay";
+            this.label_MoneyPay.Size = new System.Drawing.Size(105, 31);
+            this.label_MoneyPay.TabIndex = 138;
+            this.label_MoneyPay.Text = "money";
             // 
             // label15
             // 
@@ -120,16 +120,16 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
             this.iconPictureBox3.TabIndex = 131;
             this.iconPictureBox3.TabStop = false;
             // 
-            // labelMoneyFood
+            // label_MoneyFood
             // 
-            this.labelMoneyFood.AutoSize = true;
-            this.labelMoneyFood.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMoneyFood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.labelMoneyFood.Location = new System.Drawing.Point(238, 288);
-            this.labelMoneyFood.Name = "labelMoneyFood";
-            this.labelMoneyFood.Size = new System.Drawing.Size(63, 19);
-            this.labelMoneyFood.TabIndex = 129;
-            this.labelMoneyFood.Text = "money";
+            this.label_MoneyFood.AutoSize = true;
+            this.label_MoneyFood.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_MoneyFood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label_MoneyFood.Location = new System.Drawing.Point(238, 288);
+            this.label_MoneyFood.Name = "label_MoneyFood";
+            this.label_MoneyFood.Size = new System.Drawing.Size(63, 19);
+            this.label_MoneyFood.TabIndex = 129;
+            this.label_MoneyFood.Text = "money";
             // 
             // label10
             // 
@@ -170,12 +170,13 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
             this.buttonPay.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonPay.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonPay.UseVisualStyleBackColor = false;
+            this.buttonPay.Click += new System.EventHandler(this.buttonPay_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel2.Controls.Add(this.iconPictureBox3);
-            this.panel2.Controls.Add(this.labelMoneyFood);
+            this.panel2.Controls.Add(this.label_MoneyFood);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.dataGridViewFood);
@@ -196,13 +197,13 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
             this.dataGridViewFood.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewFood.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewFood.ColumnHeadersHeight = 20;
+            this.dataGridViewFood.ColumnHeadersHeight = 18;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Lucida Handwriting", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -252,16 +253,16 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
             this.labelPrice.TabIndex = 127;
             this.labelPrice.Text = "Price";
             // 
-            // label_TotalmoneyRoom
+            // label_TotalDatPhong
             // 
-            this.label_TotalmoneyRoom.AutoSize = true;
-            this.label_TotalmoneyRoom.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_TotalmoneyRoom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label_TotalmoneyRoom.Location = new System.Drawing.Point(289, 288);
-            this.label_TotalmoneyRoom.Name = "label_TotalmoneyRoom";
-            this.label_TotalmoneyRoom.Size = new System.Drawing.Size(63, 19);
-            this.label_TotalmoneyRoom.TabIndex = 126;
-            this.label_TotalmoneyRoom.Text = "money";
+            this.label_TotalDatPhong.AutoSize = true;
+            this.label_TotalDatPhong.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_TotalDatPhong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label_TotalDatPhong.Location = new System.Drawing.Point(289, 288);
+            this.label_TotalDatPhong.Name = "label_TotalDatPhong";
+            this.label_TotalDatPhong.Size = new System.Drawing.Size(63, 19);
+            this.label_TotalDatPhong.TabIndex = 126;
+            this.label_TotalDatPhong.Text = "money";
             // 
             // labeltenRoom
             // 
@@ -294,11 +295,12 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
             this.buttonCancel.IconColor = System.Drawing.Color.Red;
             this.buttonCancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.buttonCancel.IconSize = 30;
-            this.buttonCancel.Location = new System.Drawing.Point(1283, 1);
+            this.buttonCancel.Location = new System.Drawing.Point(1271, -1);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(36, 36);
             this.buttonCancel.TabIndex = 132;
             this.buttonCancel.UseVisualStyleBackColor = false;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // label_id_guest
             // 
@@ -410,7 +412,7 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.iconPictureBox4);
             this.panel1.Controls.Add(this.labelPrice);
-            this.panel1.Controls.Add(this.label_TotalmoneyRoom);
+            this.panel1.Controls.Add(this.label_TotalDatPhong);
             this.panel1.Controls.Add(this.labeltenRoom);
             this.panel1.Controls.Add(this.label_Daystart);
             this.panel1.Controls.Add(this.label_id_guest);
@@ -426,20 +428,6 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(472, 331);
             this.panel1.TabIndex = 135;
-            // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Coins;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 45;
-            this.iconPictureBox1.Location = new System.Drawing.Point(423, 11);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(45, 46);
-            this.iconPictureBox1.TabIndex = 134;
-            this.iconPictureBox1.TabStop = false;
             // 
             // labelTrangThai
             // 
@@ -461,6 +449,20 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
             this.label8.TabIndex = 132;
             this.label8.Text = "Trạng thái:";
             // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Coins;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 45;
+            this.iconPictureBox1.Location = new System.Drawing.Point(423, 11);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(45, 46);
+            this.iconPictureBox1.TabIndex = 134;
+            this.iconPictureBox1.TabStop = false;
+            // 
             // FormPayRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -468,7 +470,7 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1307, 517);
             this.Controls.Add(this.iconPictureBox2);
-            this.Controls.Add(this.labelMoneyPay);
+            this.Controls.Add(this.label_MoneyPay);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.buttonPay);
             this.Controls.Add(this.panel2);
@@ -497,10 +499,10 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
         #endregion
 
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
-        private System.Windows.Forms.Label labelMoneyPay;
+        private System.Windows.Forms.Label label_MoneyPay;
         private System.Windows.Forms.Label label15;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
-        private System.Windows.Forms.Label labelMoneyFood;
+        private System.Windows.Forms.Label label_MoneyFood;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label13;
         private FontAwesome.Sharp.IconButton buttonPay;
@@ -508,7 +510,7 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
         private System.Windows.Forms.DataGridView dataGridViewFood;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
         private System.Windows.Forms.Label labelPrice;
-        private System.Windows.Forms.Label label_TotalmoneyRoom;
+        private System.Windows.Forms.Label label_TotalDatPhong;
         private System.Windows.Forms.Label labeltenRoom;
         private System.Windows.Forms.Label label_Daystart;
         private FontAwesome.Sharp.IconButton buttonCancel;

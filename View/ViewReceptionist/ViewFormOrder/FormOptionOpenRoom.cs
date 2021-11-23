@@ -16,15 +16,16 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
     public partial class FormOptionOpenRoom : Form
     {
         int id_datPhong;
-        public void fillData(int id_room)
+        public bool fillData(int id_room)
         {
             DataTable data = DatPhongDAO.DatPhong_getMaDatAvaiByIDPhong_func(id_room);
             if (data.Rows.Count== 0)
             {
-                return;
+                return false;
             }
             int id_datPhong = int.Parse(data.Rows[0][0].ToString());
             this.id_datPhong = id_datPhong;
+            return true;
         }
         public FormOrderRoom formParent { get; set; }
         public FormOptionOpenRoom()
@@ -49,7 +50,10 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
         private void buttonOrderFood_Click(object sender, EventArgs e)
         {
             FormOrderFood form = new FormOrderFood();
-            form.id_datPhong = this.id_datPhong;
+            if (!form.fillData(id_datPhong))
+            {
+                return;
+            }
             if (form.ShowDialog() == DialogResult.OK)
             {
                 this.formParent.init();
@@ -59,15 +63,19 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrder
         private void buttonSwapRoom_Click(object sender, EventArgs e)
         {
             FormSwapRoom form = new FormSwapRoom();
+            form.fillData(id_datPhong);
             if (form.ShowDialog() == DialogResult.OK)
             {
-               
+                this.formParent.init();
             }
         }
 
         private void buttonPayRoom_Click(object sender, EventArgs e)
         {
-            
+            FormPayRoom form = new FormPayRoom();
+            form.fillData(this.id_datPhong);
+            form.ShowDialog();
+                this.formParent.init();
         }
     }
 }

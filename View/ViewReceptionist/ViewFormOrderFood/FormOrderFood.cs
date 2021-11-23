@@ -1,9 +1,12 @@
-﻿using Management_Hotel.Model;
+﻿using Management_Hotel.Control;
+using Management_Hotel.Control_DAO;
+using Management_Hotel.Model;
 using Management_Hotel.View.ViewReceptionist.CtrUser;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -18,38 +21,46 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrderFood
         public FormOrderFood()
         {
             InitializeComponent();
+            init();
         }
-        public int id_datPhong { get; set; }
+        int id_datPhong;
+        public void init()
+        {
+            this.textBoxSearch.Text = "";
+            DataTable data = KhoDAO.Kho_Available_view();
+            dataGrid_Load(data);
+        }
+        public bool fillData(int id_datPhong)
+        {
+            this.id_datPhong = id_datPhong;
+            return true;
+        }
         private void buttonOrder_Click(object sender, EventArgs e)
         {
+            SqlTransaction trans = ConnectionController.beginTransaction();
             foreach (ControlSelectFood ctr in this.panelSelect.Controls)
             {
-                int id = ctr.id;
-                int soLuong = ctr.soLuong;
-                ////////////// 
-                if (true)
+                int id_mon = ctr.getID();
+                int soLuong = ctr.getSoLuong();
+                if (!DatMonDAO.DatMon_add_proc(this.id_datPhong,id_mon,soLuong,trans))
                 {
-                    // do fail
+                    MessageBox.Show("Order food fail", "Management Hotel",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    trans.Rollback();
+                    init();
+                    return;
                 }
-        
             }
+            trans.Commit();
+            init();
             this.panelSelect.Controls.Clear();
-            this.dataGrid_Load();
-            MessageBox.Show("Đặt món thành công!", "Management Hotel",
+            MessageBox.Show("Order food success!", "Management Hotel",
        MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        public Image CvtToImg(byte[] byteImage)
+        public void dataGrid_Load(DataTable data)
         {
-            if (byteImage == null) return null;
-            using (MemoryStream ms = new MemoryStream(byteImage))
-            {
-                return new Bitmap(ms);
-            }
-        }
-        public void dataGrid_Load()
-        {
-            //this.dataGridViewFood.DataSource = this.ctrFood.getDataFoodAvailable();
+            this.dataGridViewFood.DataSource = data;
             this.dataGridViewFood.AllowUserToAddRows = false;
             this.dataGridViewFood.RowTemplate.Height = 50;
             int[] colWidth = { 80, 120, 120, 120, 160 };
@@ -64,26 +75,26 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrderFood
         }
         private void dataGridViewFood_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
             DataTable data = this.dataGridViewFood.DataSource as DataTable;
             int id = int.Parse(data.Rows[e.RowIndex][0].ToString());
             foreach (ControlSelectFood ctr in this.panelSelect.Controls)
             {
-                if (ctr.id == id)
+                if (ctr.getID() == id)
                 {
                     ctr.buttonPlus_Click(null, null);
                     return;
                 }
             }
             ControlSelectFood control = new ControlSelectFood();
-            String tenMon = data.Rows[e.RowIndex][1].ToString();
-            float Gia = float.Parse(data.Rows[e.RowIndex][1].ToString());
-            int SoLuong = int.Parse( data.Rows[e.RowIndex][1].ToString());
-            Image img = CvtToImg((byte[])data.Rows[e.RowIndex][1]);
-            if (control.fillData(id, tenMon, Gia, SoLuong, img) == false)
+            if (!control.fillData(id))
             {
                 control.Dispose();
+                MessageBox.Show("Sold out", "Management Hotel",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
             panelSelect.Controls.Add(control);
             control.Dock = DockStyle.Top;
         }
@@ -112,9 +123,9 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrderFood
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
-            DataTable data = this.dataGridViewFood.DataSource as DataTable;
             string search = this.textBoxSearch.Text.Trim();
-            data.DefaultView.RowFilter = string.Format("tenMon like '%{0}%'", search);
+            DataTable data = KhoDAO.Kho_searchFilter_func(search);
+            dataGrid_Load(data);
         }
 
         private void buttonRefresh_Click(object sender, EventArgs e)
@@ -122,8 +133,8 @@ namespace Management_Hotel.View.ViewReceptionist.ViewFormOrderFood
             float total = 0;
             foreach (ControlSelectFood ctr in this.panelSelect.Controls)
             {
-                float gia = ctr.Gia;
-                int soLuong = ctr.soLuong;
+                float gia = ctr.getGia();
+                int soLuong = ctr.getSoLuong();
                 total += gia * soLuong;
             }
             this.labelTotalMoney.Text = string.Format("{0}d", total);

@@ -34,16 +34,16 @@ namespace Management_Hotel.View.ViewReceptionist.CtrUser
             // 
             // buttonOrder
             // 
-            this.buttonOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.buttonOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.buttonOrder.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonOrder.FlatAppearance.BorderSize = 0;
-            this.buttonOrder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.buttonOrder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.buttonOrder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.buttonOrder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOrder.Font = new System.Drawing.Font("Britannic Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonOrder.ForeColor = System.Drawing.Color.Blue;
             this.buttonOrder.IconChar = FontAwesome.Sharp.IconChar.DoorClosed;
-            this.buttonOrder.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonOrder.IconColor = System.Drawing.Color.Blue;
             this.buttonOrder.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.buttonOrder.IconSize = 130;
             this.buttonOrder.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
