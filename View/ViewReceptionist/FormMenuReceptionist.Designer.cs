@@ -44,7 +44,7 @@ namespace Management_Hotel.View.ViewReceptionist
             // panelShow
             // 
             this.panelShow.AutoScroll = true;
-            this.panelShow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panelShow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.panelShow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelShow.Location = new System.Drawing.Point(200, 0);
             this.panelShow.Name = "panelShow";

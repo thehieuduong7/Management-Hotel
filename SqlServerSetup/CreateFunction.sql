@@ -112,6 +112,8 @@ begin
 declare @tongTienAn float
 Select @tongTienAn = SUM(DatMon.SoLuong*GiaBan) from DatMon,Kho where ID_DatPhong=@MaDat and DatMon.ID_Mon=Kho.ID_Mon
 	group by ID_DatPhong
+if @tongTienAn is null
+return 0
 return @tongTienAn
 end
 go

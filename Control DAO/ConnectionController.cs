@@ -13,16 +13,7 @@ namespace Management_Hotel.Control
     public class ConnectionController
     {
         public static SqlConnection connection { get; set; }    
-        public static void init()
-        {
-            if (ConnectionController.connection == null)
-                ConnectionController.connection =
-                 new SqlConnection(@"Data Source=DESKTOP-AV5GUUN\SQLEXPRESS;Initial Catalog=projectDBMS;Integrated Security=True");
 
-            new SqlConnection( @"Data Source=DESKTOP-AV5GUUN\SQLEXPRESS;Initial Catalog=projectDBMS;User ID=thehieu");
-            connection.Open();
-
-        }
         public static bool login(String username, string password)
         {
             String connect_str = String.Format(@"Data Source=DESKTOP-AV5GUUN\SQLEXPRESS;Initial Catalog=projectDBMS;" +

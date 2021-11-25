@@ -211,7 +211,7 @@ begin
 	insert into PhanQuyen(username,quyen) values(@username,@tenQuyen)
 end
 go
-alter procedure PhanQuyen_del_proc(@username char(18),@tenQuyen char(100))
+create procedure PhanQuyen_del_proc(@username char(18),@tenQuyen char(100))
 as
 begin
 	delete from PhanQuyen where username=Trim(@username) and quyen=Trim(@tenQuyen)
@@ -320,6 +320,7 @@ begin
 	exec ('Grant'+' Select on NhanVien_detail_view to '+@username)
 	exec ('Grant'+' Select on AccountNV_detail_view to '+@username)
 	exec ('Grant'+' Select on Phong_trangthai_view to '+@username)
+	exec ('Grant'+' Select on Phong_Available_view to '+@username)
 	exec ('Grant'+' Select on Kho_detail_view to '+@username)
 	exec ('Grant'+' Select on Kho_Available_view to '+@username)
 	exec ('Grant'+' Select on NhapKho_TongNhap_view to '+@username)
@@ -365,6 +366,7 @@ as
 begin
 	exec ('Grant'+' Select on KhachHang_detail_view to '+@username)
 	exec ('Grant'+' Select on Phong_trangthai_view to '+@username)
+	exec ('Grant'+' Select on Phong_Available_view to '+@username)
 	exec ('Grant'+' Select on Kho_detail_view to '+@username)
 	exec ('Grant'+' Select on Kho_Available_view to '+@username)
 	exec ('Grant'+' Select on DatPhong_detail_view to '+@username)

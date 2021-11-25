@@ -85,6 +85,7 @@ begin
 end
 go
 
+
 ------------Dat Mon
 create Trigger DatMon_add_trig on DatMon after insert	-- them dat mon thi` tru so luong o kho
 as 
