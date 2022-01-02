@@ -361,6 +361,7 @@ begin
 	Insert into PhanQuyen(username,quyen) values (@username,'PhanQuyen_excute_NhapKho')
 end
 go
+
 create procedure PhanQuyen_TiepTan_Default(@username char(18))
 as
 begin
